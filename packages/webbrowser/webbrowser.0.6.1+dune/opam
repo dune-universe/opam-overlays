@@ -1,0 +1,35 @@
+opam-version: "2.0"
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+homepage: "http://erratique.ch/software/webbrowser"
+doc: "http://erratique.ch/software/webbrowser/doc"
+license: "ISC"
+dev-repo: "git+http://erratique.ch/repos/webbrowser.git"
+bug-reports: "https://github.com/dbuenzli/webbrowser/issues"
+tags: [ "web" "http" "uri" "browser" "cli" "org:erratique"]
+depends: [
+  "dune" {build}
+  "ocaml" {>= "4.01.0"}
+  "rresult"
+  "astring"
+  "bos"
+]
+depopts: [
+   "cmdliner"
+]
+synopsis: "Open and reload URIs in browsers from OCaml"
+description: """
+Webbrowser is a library to open and reload URIs in web browsers from
+OCaml.
+
+Webbrowser depends on [bos][bos]. The optional command line support
+provided by the Webbrowser_cli library depends on [cmdliner][cmdliner].
+
+Webbrowser is distributed under the ISC license. 
+
+[bos]: http://erratique.ch/software/bos
+[cmdliner]: http://erratique.ch/software/cmdliner"""
+build: [[ "dune" "build" "-p" name ]]
+url {
+  src: "git://github.com/dune-universe/webbrowser.git#duniverse-v0.6.1"
+}
