@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/logs"
 doc: "http://erratique.ch/software/logs/doc"
-dev-repo: "git+http://erratique.ch/repos/logs.git"
+dev-repo: "git+https://github.com/dune-universe/logs.git"
 bug-reports: "https://github.com/dbuenzli/logs/issues"
 tags: [ "log" "system" "org:erratique" ]
 license: "ISC"

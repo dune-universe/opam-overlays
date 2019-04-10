@@ -4,7 +4,7 @@ maintainer: "David Kaloper Meršinjak <david@numm.org>"
 homepage: "https://github.com/mirleft/ocaml-asn1-combinators"
 doc: "https://mirleft.github.io/ocaml-asn1-combinators/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/mirleft/ocaml-asn1-combinators.git"
+dev-repo: "git+https://github.com/dune-universe/ocaml-asn1-combinators.git"
 bug-reports: "https://github.com/mirleft/ocaml-asn1-combinators/issues"
 tags: [ "org:mirage" ]
 depends: [

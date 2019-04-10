@@ -6,7 +6,7 @@ authors: [
 ]
 homepage: "http://erratique.ch/software/fmt"
 doc: "http://erratique.ch/software/fmt"
-dev-repo: "git+http://erratique.ch/repos/fmt.git"
+dev-repo: "git+https://github.com/dune-universe/fmt.git"
 bug-reports: "https://github.com/dbuenzli/fmt/issues"
 tags: [ "string" "format" "pretty-print" "org:erratique" ]
 license: "ISC"

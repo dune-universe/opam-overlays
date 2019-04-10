@@ -7,7 +7,7 @@ authors: ["Louis Gesbert <louis.gesbert@ocamlpro.com>"
 homepage: "https://github.com/ocaml/opam-depext"
 bug-reports: "https://github.com/ocaml/opam-depext/issues"
 license: "LGPL-2.1 with OCaml linking exception"
-dev-repo: "https://github.com/ocaml/opam-depext.git#2.0"
+dev-repo: "git+https://github.com/dune-universe/opam-depext.git"
 depends: [ "dune" {build} ]
 available: [ opam-version >= "2.0.0~beta5" ]
 tags: "flags:plugin"

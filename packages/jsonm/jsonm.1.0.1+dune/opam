@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/jsonm"
 doc: "http://erratique.ch/software/jsonm/doc/Jsonm"
-dev-repo: "git+http://erratique.ch/repos/jsonm.git"
+dev-repo: "git+https://github.com/dune-universe/jsonm.git"
 bug-reports: "https://github.com/dbuenzli/jsonm/issues"
 tags: [ "json" "codec" "org:erratique" ]
 license: "ISC"

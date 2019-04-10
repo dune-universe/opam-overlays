@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/fpath"
 doc: "http://erratique.ch/software/fpath/doc"
-dev-repo: "git+http://erratique.ch/repos/fpath.git"
+dev-repo: "git+https://github.com/dune-universe/fpath.git"
 bug-reports: "https://github.com/dbuenzli/fpath/issues"
 tags: [ "file" "system" "path" "org:erratique" ]
 license: "ISC"

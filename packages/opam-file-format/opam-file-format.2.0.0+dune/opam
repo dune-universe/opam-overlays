@@ -4,7 +4,7 @@ authors: "Louis Gesbert <louis.gesbert@ocamlpro.com>"
 homepage: "https://opam.ocaml.org"
 bug-reports: "https://github.com/ocaml/opam-file-format/issues"
 license: "LGPL-2.1 with OCaml linking exception"
-dev-repo: "git+https://github.com/ocaml/opam-file-format"
+dev-repo: "git+https://github.com/dune-universe/opam-file-format.git"
 synopsis: "Parser and printer for the opam file syntax"
 depends: [
   "dune" {build}
