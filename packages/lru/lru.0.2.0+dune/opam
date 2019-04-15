@@ -4,7 +4,7 @@ authors: ["David Kaloper Meršinjak <david@numm.org>"]
 homepage: "https://github.com/pqwy/lru"
 doc: "https://pqwy.github.io/lru/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/pqwy/lru.git"
+dev-repo: "git+https://github.com/dune-universe/lru.git"
 bug-reports: "https://github.com/pqwy/lru/issues"
 tags: ["data-structure"]
 depends: [

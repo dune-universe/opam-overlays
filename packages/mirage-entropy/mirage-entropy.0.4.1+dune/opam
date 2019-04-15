@@ -1,7 +1,7 @@
 opam-version: "2.0"
 name:         "mirage-entropy"
 homepage:     "https://github.com/mirage/mirage-entropy"
-dev-repo: "git+https://github.com/mirage/mirage-entropy.git"
+dev-repo: "git+https://github.com/dune-universe/mirage-entropy.git"
 bug-reports:  "https://github.com/mirage/mirage-entropy/issues"
 doc:          "https://mirage.github.io/mirage-entropy/doc"
 maintainer:   "david@numm.org"

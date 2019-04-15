@@ -4,7 +4,7 @@ authors: ["David Kaloper Meršinjak <david@numm.org>"]
 homepage: "https://github.com/pqwy/psq"
 doc: "https://pqwy.github.io/psq/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/pqwy/psq.git"
+dev-repo: "git+https://github.com/dune-universe/psq.git"
 bug-reports: "https://github.com/pqwy/psq/issues"
 depends: [
   "dune" {build}
