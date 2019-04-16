@@ -22,6 +22,16 @@ depends: [
 ]
 depopts: [ "base-unix" "cmdliner" ]
 conflicts: [ "cmdliner" {< "0.9.8"} ]
-url: {
-  src: "git+https://github.com/dune-universe/fmt#v0.8.6+dune 
+synopsis: "OCaml Format pretty-printer combinators"
+description: """
+Fmt exposes combinators to devise `Format` pretty-printing functions.
+Fmt depends only on the OCaml standard library. The optional `Fmt_tty`
+library that allows to setup formatters for terminal color output
+depends on the Unix library. The optional `Fmt_cli` library that
+provides command line support for Fmt depends on [`Cmdliner`][cmdliner].
+Fmt is distributed under the ISC license.
+[cmdliner]: http://erratique.ch/software/cmdliner
+"""
+url {
+  src: "git+https://github.com/dune-universe/fmt#v0.8.6+dune"
 }
