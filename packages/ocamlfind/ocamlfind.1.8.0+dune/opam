@@ -5,22 +5,7 @@ bug-reports:  "https://gitlab.camlcity.org/gerd/lib-findlib/issues"
 dev-repo: "git+https://github.com/dune-universe/lib-findlib.git"
 patches: ["no-awk-check.patch"]
 build: [
-  [
-    "./configure"
-    "-bindir"
-    bin
-    "-sitelib"
-    lib
-    "-mandir"
-    man
-    "-config"
-    "%{lib}%/findlib.conf"
-    "-no-custom"
-    "-no-camlp4" {!ocaml:preinstalled & ocaml:version >= "4.02.0"}
-    "-no-topfind" {ocaml:preinstalled}
-  ]
-  [make "all"]
-  [make "opt"] {ocaml:native}
+  [ "dune" "build" "-p" name "-j" jobs ]
 ]
 install: [
   [make "install"]
@@ -46,6 +31,7 @@ remove: [
 ]
 depends: [
   "ocaml" {>= "4.00.0"}
+  "dune" {build}
   "conf-m4" {build}
 ]
 synopsis: "A library manager for OCaml"
