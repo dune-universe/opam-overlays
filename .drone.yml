@@ -19,16 +19,17 @@ steps:
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
-  - export OPAMJOBS=40
-  - opam repo add overlays .
   - opam update -uy
+  - opam pin add -n duniverse https://github.com/avsm/duniverse.git
+  - opam depext -iy duniverse
+  - sudo cp `which duniverse` /usr/bin/duniverse
+  - opam pin remove -y duniverse
+  - opam pin remove `opam list -s`
   - ./list-overrides.sh > pkglist.txt
-  - git clone git://github.com/avsm/duniverse.git
-  - cd duniverse && opam switch create . && opam exec -- dune build @install && sudo mv _build/default/bin/duniverse.exe /usr/bin/duniverse
   - mkdir duniverse-build
   - cd duniverse-build
-  - duniverse init `cat ../pkglist.txt`
-  - duniverse pull
+  - duniverse init `cat ../pkglist.txt` -vv
+  - duniverse pull -vv
   - opam depext -y `cat ../pkglist.txt`
   - opam install -y dune
   - opam exec -- dune build
