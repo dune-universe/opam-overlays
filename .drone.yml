@@ -23,6 +23,8 @@ steps:
   - opam repo add overlays .
   - opam update -uy
   - ./list-overrides.sh > pkglist.txt
+  - opam list --resolve=`paste -d',' -s pkglist.txt` -V -S --no-switch -s --color=never
+  - opam list --resolve=`paste -d',' -s pkglist.txt` -V -S -s --color=never
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - opam --yes depext -iy duniverse
   - mkdir duniverse-build
