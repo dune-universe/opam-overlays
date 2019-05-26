@@ -24,7 +24,8 @@ steps:
   - opam depext -iy duniverse
   - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
   - opam pin remove -y duniverse
-  - opam remove -y `opam list -s`
+  - opam remove -y duniverse
+  - opam remove -ay
   - ./list-overrides.sh > pkglist.txt
   - mkdir duniverse-build
   - cd duniverse-build
