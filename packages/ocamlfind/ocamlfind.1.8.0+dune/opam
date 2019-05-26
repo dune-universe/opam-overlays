@@ -47,6 +47,7 @@ remove: [
 depends: [
   "ocaml" {>= "4.00.0"}
   "conf-m4" {build}
+  "dune" {post}
 ]
 synopsis: "A library manager for OCaml"
 description: """
