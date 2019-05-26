@@ -12,7 +12,8 @@ fi
 STATUS=0
 
 for pkg in `opam show -f package "${PACKAGES[@]}"`; do
-	if ! [[ $pkg = *"+dune" ]]; then
+        barepkg=`echo $pkg | awk -F'+' '{print $1}'`
+	if ! [[ $pkg != $barepkg ]]; then
 		echo "New version upstream: $pkg"
 		STATUS=1
 	fi
