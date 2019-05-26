@@ -25,10 +25,10 @@ steps:
   - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
   - opam pin remove -y duniverse
   - opam remove -ay
-  - ./list-overrides.sh > pkglist.txt
+  - ./list-overrides.sh -bare > pkglist.txt
   - mkdir duniverse-build
   - cd duniverse-build
-  - duniverse init `grep -v opam ../pkglist.txt` -vv
+  - duniverse init `cat ../pkglist.txt` -vv
   - duniverse pull -vv
   - opam depext -y `cat ../pkglist.txt`
   - opam install -y dune
