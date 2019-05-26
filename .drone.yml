@@ -28,7 +28,7 @@ steps:
   - ./list-overrides.sh > pkglist.txt
   - mkdir duniverse-build
   - cd duniverse-build
-  - duniverse init opam-devel -vv
+  - duniverse init `grep -v opam ../pkglist.txt` -vv
   - duniverse pull -vv
   - opam depext -y `cat ../pkglist.txt`
   - opam install -y dune
