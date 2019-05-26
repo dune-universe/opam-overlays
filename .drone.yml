@@ -24,7 +24,7 @@ steps:
   - opam update -uy
   - ./list-overrides.sh > pkglist.txt
   - git clone git://github.com/avsm/duniverse.git
-  - cd duniverse.git && opam switch create . && opam exec -- dune build @install && sudo mv _build/default/bin/duniverse.exe /usr/bin/duniverse
+  - cd duniverse && opam switch create . && opam exec -- dune build @install && sudo mv _build/default/bin/duniverse.exe /usr/bin/duniverse
   - mkdir duniverse-build
   - cd duniverse-build
   - duniverse init `cat ../pkglist.txt`
