@@ -19,6 +19,7 @@ steps:
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
+  - export OPAMJOBS=40
   - opam repo add overlays .
   - opam update -uy
   - ./list-overrides.sh > pkglist.txt
