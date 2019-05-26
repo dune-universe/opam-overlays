@@ -37,7 +37,7 @@ Topkg-care is distributed under the ISC license it depends on
 [cmdliner]: http://erratique.ch/software/cmdliner
 [webbrowser]: http://erratique.ch/software/webbrowser
 """
-build: [[ "dune" "build" "-p" name ]]
+build: [[ "dune" "build" "-p" name "-j" jobs ]]
 url {
   src: "git://github.com/dune-universe/topkg.git#duniverse-v1.0.0"
 }
