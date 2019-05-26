@@ -21,7 +21,7 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
-  - ./list-overrides.sh -bare > pkglist.txt
+  - ./list-overrides.sh > pkglist.txt
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - opam --yes depext -iy duniverse
   - mkdir duniverse-build
