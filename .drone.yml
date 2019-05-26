@@ -29,9 +29,10 @@ steps:
   - mkdir /tmp/duniverse-build
   - duniverse init --overlay-remote . --repo /tmp/duniverse-build `cat pkglist.txt` -vv
   - cd /tmp/duniverse-build
-  - duniverse pull -vv
+  - duniverse pull 
   - opam depext -y `cat ../pkglist.txt`
   - opam install -y dune
+  - opam exec -- dune upgrade
   - opam exec -- dune build
 - name: outofdate
   image: ocaml/opam2
