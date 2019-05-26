@@ -10,8 +10,7 @@ tags:          [ "org:mirage" ]
 depends: [
   "dune" {build}
   "ocaml" {>= "4.02.0"}
-  "cpuid" {build}
-  "ocb-stubblr" {build}
+  "cpuid"
   "ppx_deriving"
   "ppx_sexp_conv" {>= "113.33.01"}
   "ounit" {with-test}
@@ -20,8 +19,6 @@ depends: [
   "zarith"
   "lwt"
   "sexplib"
-  "mirage-no-xen" | ("mirage-xen" "mirage-entropy" "zarith-xen")
-  "mirage-no-solo5" | ("mirage-solo5" "mirage-entropy" "zarith-freestanding")
 ]
 conflicts: [
   "ocb-stubblr" {<"0.1.0"}
