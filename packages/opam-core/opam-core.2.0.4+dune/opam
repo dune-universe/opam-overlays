@@ -28,7 +28,7 @@ build: [
   ["./configure" "--disable-checks" "--prefix" prefix]
   [make "%{name}%.install"]
 ]
-dev-repo: "git+https://github.com/ocaml/opam.git"
+dev-repo: "git+https://github.com/dune-universe/opam.git"
 url {
   src: "git://github.com/dune-universe/opam.git#duniverse-2.0.4"
 }
