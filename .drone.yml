@@ -23,13 +23,12 @@ steps:
   - opam repo add overlays .
   - opam update -uy
   - ./list-overrides.sh > pkglist.txt
-  - opam list --resolve=`paste -d',' -s pkglist.txt` -V -S -s --color=never
-  - opam pin add -n duniverse https://github.com/avsm/duniverse.git
-  - opam --yes depext -iy duniverse
+  - git clone git://github.com/avsm/duniverse.git
+  - cd duniverse.git && opam switch create . && opam exec -- dune build @install && sudo mv _build/default/bin/duniverse.exe /usr/bin/duniverse
   - mkdir duniverse-build
   - cd duniverse-build
-  - opam exec -- duniverse init `cat ../pkglist.txt`
-  - opam exec -- duniverse pull
+  - duniverse init `cat ../pkglist.txt`
+  - duniverse pull
   - opam depext -y `cat ../pkglist.txt`
   - opam install -y dune
   - opam exec -- dune build
