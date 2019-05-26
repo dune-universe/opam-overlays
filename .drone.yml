@@ -32,6 +32,7 @@ steps:
   - opam exec -- dune build
 - name: outofdate
   image: ocaml/opam2
+  commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
