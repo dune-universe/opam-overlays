@@ -1,6 +1,6 @@
 opam-version: "2.0"
 homepage:     "https://github.com/mirleft/ocaml-nocrypto"
-dev-repo: "git+https://github.com/dune-universe/ocaml-nocrypto.git"
+dev-repo:     "git+https://github.com/dune-universe/ocaml-nocrypto.git"
 bug-reports:  "https://github.com/mirleft/ocaml-nocrypto/issues"
 doc:          "https://mirleft.github.io/ocaml-nocrypto/doc"
 authors:      ["David Kaloper <david@numm.org>"]
@@ -15,7 +15,7 @@ depends: [
   "ppx_deriving"
   "ppx_sexp_conv" {>= "113.33.01"}
   "ounit" {with-test}
-  "cstruct" {>= "2.4.0" & <"3.4.0"}
+  "cstruct" {>= "2.4.0"}
   "cstruct-lwt"
   "zarith"
   "lwt"
