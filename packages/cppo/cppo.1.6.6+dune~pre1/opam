@@ -29,5 +29,5 @@ Cppo is:
 * simple to install and to maintain
 """
 url {
-  src: "git://github.com/ocaml-community/cppo.git#677cdab4005c27d12a5f05ba6e16dd054653934d"
+  src: "git://github.com/ocaml-community/cppo.git"
 }
