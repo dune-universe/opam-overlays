@@ -6,11 +6,40 @@ platform:
   arch: amd64
 
 steps:
-- name: build
+- name: opam
   image: ocaml/opam2
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
-  - opam repo add dev .
+  - opam repo add overlays .
   - opam update -uy
-  - env OPAMJOBS=40 opam --yes depext -iy `find packages -type d -exec basename {} \; -mindepth 2 -maxdepth 2`
+  - env OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh`
+- name: duniverse
+  image: ocaml/opam2
+  commands:
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add overlays .
+  - opam update -uy
+  - opam pin add -n duniverse https://github.com/avsm/duniverse.git
+  - opam --yes depext -iy duniverse
+  - mkdir duniverse-build
+  - cd duniverse-build
+  - opam exec -- duniverse init `./list-overrides.sh -bare`
+  - opam exec -- duniverse pull
+  - opam depext -y `./list-overrides.sh -bare`
+  - opam install -y dune
+  - opam exec -- dune build
+- name: outofdate
+  image: ocaml/opam2
+  - sudo chown -R opam .
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add overlays .
+  - opam update -uy
+  - ./check-upstream.sh
+- name: all
+  image: ocaml/opam2
+  depends_on:
+  - outofdate
+  - duniverse
+  - opam
