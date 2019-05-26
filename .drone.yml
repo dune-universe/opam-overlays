@@ -21,13 +21,14 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
+  - ./list-overrides.sh -bare > pkglist.txt
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - opam --yes depext -iy duniverse
   - mkdir duniverse-build
   - cd duniverse-build
-  - opam exec -- duniverse init `./list-overrides.sh -bare`
+  - opam exec -- duniverse init `cat ../pkglist.txt`
   - opam exec -- duniverse pull
-  - opam depext -y `./list-overrides.sh -bare`
+  - opam depext -y `cat ../pkglist.txt`
   - opam install -y dune
   - opam exec -- dune build
 - name: outofdate
