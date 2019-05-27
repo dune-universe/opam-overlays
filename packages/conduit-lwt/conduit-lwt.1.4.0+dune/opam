@@ -13,7 +13,7 @@ depends: [
   "base-unix"
   "ppx_sexp_conv" {< "v0.13"}
   "sexplib" {< "v0.13"}
-  "conduit" {="1.4.0"}
+  "conduit" {=version}
   "lwt" {>= "3.0.0"}
 ]
 build: [
