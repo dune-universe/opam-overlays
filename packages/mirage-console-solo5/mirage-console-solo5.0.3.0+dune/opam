@@ -13,7 +13,6 @@ tags: [
   "org:mirage"
 ]
 build: [ ["dune" "build" "-p" name "-j" jobs] ]
-]
 depends: [
   "ocaml" {>= "4.04.2"}
   "dune"
