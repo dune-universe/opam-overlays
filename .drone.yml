@@ -19,6 +19,7 @@ steps:
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
+  - opam repo add overlays .
   - opam update -uy
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git#add-overlay
   - opam depext -iy duniverse
