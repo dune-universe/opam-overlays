@@ -28,7 +28,7 @@ steps:
   - opam remove -ay
   - PKGS=`./list-overrides.sh`
   - mkdir /tmp/duniverse-build
-  - duniverse init --overlay-remote . --repo /tmp/duniverse-build $PKGS -vv
+  - duniverse init --overlay-remote . --repo /tmp/duniverse-build $PKGS 
   - cd /tmp/duniverse-build
   - duniverse pull 
   - opam depext -y $PKGS
