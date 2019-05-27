@@ -34,7 +34,8 @@ steps:
   - opam depext -y $PKGS
   - opam install -y dune
   - opam exec -- dune upgrade
-  - opam exec -- dune build
+  - duniverse opam-install
+  - opam exec -- dune build --profile=release
 - name: outofdate
   image: ocaml/opam2
   commands:
