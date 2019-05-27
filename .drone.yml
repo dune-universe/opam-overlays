@@ -13,7 +13,7 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
-  - env OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh`
+  - env OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh| grep -v opam-devel`
 - name: duniverse
   image: ocaml/opam2
   commands:
