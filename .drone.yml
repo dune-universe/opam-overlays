@@ -21,6 +21,7 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
+  - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
   - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
   - opam pin remove -y duniverse
