@@ -9,8 +9,7 @@ tags: [ "json" "codec" "org:erratique" ]
 license: "ISC"
 depends: [
   "dune" {build}
-  "ocaml" {>= "4.01.0"}
-  "uchar"
+  "ocaml" {>= "4.03.0"}
   "uutf" {>= "1.0.0"}
 ]
 synopsis: "Non-blocking streaming JSON codec for OCaml"
