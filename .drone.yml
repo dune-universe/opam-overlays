@@ -13,7 +13,7 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
-  - env OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh| grep -v opam-devel`
+  - env OPAMDOWNLOADJOBS=10 OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh| grep -v opam-devel`
 - name: duniverse
   image: ocaml/opam2
   commands:
@@ -22,7 +22,7 @@ steps:
   - opam repo add overlays .
   - opam update -uy
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git#add-overlay
-  - opam depext -iy duniverse
+  - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
   - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
   - opam pin remove -y duniverse
   - opam remove -ay

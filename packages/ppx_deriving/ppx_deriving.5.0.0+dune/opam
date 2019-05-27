@@ -31,5 +31,5 @@ code based on type definitions, and a set of useful plugins
 for common tasks.
 """
 url {
-  src: "git://github.com/ocaml-ppx/ppx-deriving.git"
+  src: "git://github.com/ocaml-ppx/ppx_deriving.git"
 }
