@@ -35,6 +35,7 @@ steps:
   - opam install -y dune
   - opam exec -- dune upgrade
   - duniverse opam-install
+  - opam install -y num ocamlbuild
   - opam exec -- dune build --profile=release
 - name: outofdate
   image: ocaml/opam2
