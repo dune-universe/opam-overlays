@@ -23,6 +23,8 @@ depends: [
   "lwt" {>= "2.4.3"}
   "ocaml-freestanding" {>= "0.4.4"}
   "mirage-os-shim"
+  "lwt-dllist"
+  "bheap"
   "logs"
   ("solo5-bindings-hvt" | "solo5-bindings-virtio" | "solo5-bindings-muen" | "solo5-bindings-genode")
 ]
