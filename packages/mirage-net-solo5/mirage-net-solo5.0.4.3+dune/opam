@@ -12,9 +12,7 @@ authors: [
 tags: [
   "org:mirage"
 ]
-build: [
-  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
-]
+build: [ ["dune" "build" "-p" name "-j" jobs] ]
 depends: [
   "ocaml" {>= "4.04.2"}
   "dune" {build}

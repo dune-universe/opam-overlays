@@ -12,12 +12,11 @@ authors: [
 tags: [
   "org:mirage"
 ]
-build: [
-  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
+build: [ ["dune" "build" "-p" name "-j" jobs] ]
 ]
 depends: [
   "ocaml" {>= "4.04.2"}
-  "dune" {build}
+  "dune"
   "mirage-console-lwt" {>= "2.2.0"}
   "mirage-solo5" {>= "0.3.0"}
   "cstruct"
