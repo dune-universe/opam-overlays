@@ -14,6 +14,7 @@ depends: [
   "cstruct"
   "zarith"
   "ptime"
+  "bigarray-compat"
   "ounit" {with-test}
 ]
 conflicts: [ "cstruct" {< "1.6.0"} ]
