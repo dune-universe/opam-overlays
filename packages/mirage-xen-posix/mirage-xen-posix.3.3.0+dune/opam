@@ -25,5 +25,5 @@ This package contains the header files to pretend a posix
 system (required to compile the OCaml runtime), plus minilibc and
 float formating."""
 url {
-  src: "git://github.com/mirage/mirage-xen-posix.git#master"
+  src: "git://github.com/mirage/mirage-platform.git#master"
 }
