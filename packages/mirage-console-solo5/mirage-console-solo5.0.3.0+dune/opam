@@ -2,7 +2,7 @@ opam-version: "2.0"
 maintainer:    "martin@lucina.net"
 homepage:      "https://github.com/mirage/mirage-console-solo5"
 bug-reports:   "https://github.com/mirage/mirage-console-solo5/issues"
-dev-repo: "git+https://github.com/mirage/mirage-console-solo5.git"
+dev-repo: "git+https://github.com/TheLortex/mirage-console-solo5.git"
 license:       "ISC"
 authors: [
   "Anil Madhavapeddy <anil@recoil.org>"
@@ -24,6 +24,8 @@ depends: [
 synopsis: "Solo5 implementation of MirageOS console interface"
 description:
   "This library implements the MirageOS console interface for Solo5 targets."
+
 url {
-  src: "git+https://github.com/mirage/mirage-console-solo5.git#master"
+  src:
+    "git://github.com/TheLortex/mirage-console.git#api-change"
 }
