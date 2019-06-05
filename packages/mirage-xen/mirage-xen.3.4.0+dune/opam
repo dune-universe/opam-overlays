@@ -42,5 +42,5 @@ the low level C startup code and C stubs required by the OCaml code.
 """
 url {
   src:
-    "git+https://github.com/dune-universe/mirage-xen.git#dune+shim-virtual"
+    "git+https://github.com/dune-universe/mirage-xen.git#separate-api"
 }
