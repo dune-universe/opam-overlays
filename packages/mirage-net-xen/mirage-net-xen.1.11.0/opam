@@ -31,5 +31,5 @@ write Ethernet frames via the [Netfront/netback][xen-net] protocol.
 """
 url {
   src:
-    "https://github.com/TheLortex/mirage-net-xen.git#api-change"
+    "git://github.com/TheLortex/mirage-net-xen.git#api-change"
 }

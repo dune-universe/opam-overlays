@@ -25,5 +25,5 @@ concurrency libary for concurrency.
 """
 url {
   src:
-    "https://github.com/TheLortex/mirage-console.git#api-change"
+    "git://github.com/TheLortex/mirage-console.git#api-change"
 }

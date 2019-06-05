@@ -39,5 +39,5 @@ The `Netchannel` API is still under development.
 """
 url {
   src:
-    "https://github.com/TheLortex/mirage-net-xen.git#api-change"
+    "git://github.com/TheLortex/mirage-net-xen.git#api-change"
 }

@@ -21,5 +21,5 @@ dev-repo: "git+https://github.com/TheLortex/mirage-console.git"
 synopsis: "Implementation of Mirage console protocol for Xen"
 url {
   src:
-    "https://github.com/TheLortex/mirage-console.git#api-change"
+    "git://github.com/TheLortex/mirage-console.git#api-change"
 }

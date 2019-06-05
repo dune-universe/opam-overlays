@@ -35,5 +35,5 @@ build: [
 dev-repo: "git+https://github.com/TheLortex/ocaml-vchan.git"
 url {
   src:
-    "https://github.com/TheLortex/ocaml-vchan.git#api-change"
+    "git://github.com/TheLortex/ocaml-vchan.git#api-change"
 }
