@@ -1,15 +1,13 @@
 opam-version: "2.0"
 maintainer:   "martin@lucina.net"
 homepage:     "https://github.com/mirage/mirage-block-solo5"
-dev-repo:     "git+https://github.com/mirage/mirage-block-solo5.git"
+dev-repo:     "git+https://github.com/TheLortex/mirage-block-solo5.git"
 bug-reports:  "https://github.com/mirage/mirage-block-solo5/issues"
 authors:      ["Dan Williams" "Martin Lucina"]
 tags: [
   "org:mirage"
 ]
-build: [
-  ["ocaml" "pkg/pkg.ml" "build" "--pinned" "%{pinned}%"]
-]
+build: [ ["dune" "build" "-p" name "-j" jobs] ]
 depends: [
   "ocaml" {>= "4.04.2"}
   "ocamlfind"  {build}
