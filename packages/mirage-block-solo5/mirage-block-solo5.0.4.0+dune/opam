@@ -10,9 +10,7 @@ tags: [
 build: [ ["dune" "build" "-p" name "-j" jobs] ]
 depends: [
   "ocaml" {>= "4.04.2"}
-  "ocamlfind"  {build}
-  "ocamlbuild" {build}
-  "topkg"      {build}
+  "dune"
   "lwt" {>= "2.4.3"}
   "cstruct" {>= "1.0.1"}
   "mirage-block-lwt" {>= "1.0.0"}
