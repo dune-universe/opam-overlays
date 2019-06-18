@@ -16,7 +16,7 @@ build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
 ]
-dev-repo: "git+https://github.com/TheLortex/mirage-console.git"
+dev-repo: "git+https://github.com/mirage/mirage-console.git"
 synopsis: "Implementations of Mirage console devices"
 description: """
 This is a general implementation of a console device, intended
@@ -24,5 +24,5 @@ for use in MirageOS.
 """
 url {
   src:
-    "git://github.com/TheLortex/mirage-console.git#api-change"
+    "git://github.com/mirage/mirage-console.git"
 }
