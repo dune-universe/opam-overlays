@@ -19,9 +19,9 @@ build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
 ]
-dev-repo: "git+https://github.com/TheLortex/mirage-console.git"
+dev-repo: "git+https://github.com/mirage/mirage-console.git"
 synopsis: "Implementation of Mirage console for Xen"
 url {
   src:
-    "git://github.com/TheLortex/mirage-console.git#api-change"
+    "git://github.com/mirage/mirage-console.git"
 }
