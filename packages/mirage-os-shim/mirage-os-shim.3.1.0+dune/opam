@@ -13,6 +13,7 @@ build: [
 depends: [
   "dune" {build & >= "1.7"}
   "ocaml" {>= "4.04.0"}
+  "mirage-time-lwt"
   "lwt"
 ]
 synopsis: "Portable shim for MirageOS OS API"
