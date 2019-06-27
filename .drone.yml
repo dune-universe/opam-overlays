@@ -14,7 +14,7 @@ steps:
   - opam repo add overlays .
   - opam update -uy
   - opam exec -- ocaml -version
-  - env OPAMERRLONGLEN=0 OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh`
+  - env OPAMERRLOGLEN=0 OPAMJOBS=40 opam --yes depext -iy `./list-overrides.sh`
 - name: platform
   image: ocaml/opam2:alpine
   commands:
