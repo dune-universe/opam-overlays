@@ -16,7 +16,6 @@ build: [ ["dune" "build" "-p" name "-j" jobs] ]
 depends: [
   "ocaml" {>= "4.04.2"}
   "dune" {build}
-  "topkg" {build}
   "cstruct" {>= "1.0.1"}
   "lwt" {>= "2.4.3"}
   "mirage-net-lwt" {>= "2.0.0"}
