@@ -4,7 +4,7 @@ description: "React is an OCaml module for functional reactive programming (FRP)
 maintainer: "dev@ocsigen.org"
 authors: ["Hugo Heuzard <hugo.heuzard@gmail.com>"]
 homepage: "https://github.com/ocsigen/reactiveData"
-dev-repo: "git+https://github.com/dune-universe/reactiveData.git"
+dev-repo: "git+https://github.com/ocsigen/reactiveData.git"
 bug-reports: "https://github.com/ocsigen/reactiveData/issues"
 
 doc:"http://ocsigen.github.io/reactiveData/dev/"
@@ -20,5 +20,5 @@ depends: [
 
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/reactiveData.git#duniverse-0.2.2"
+  src: "git+https://github.com/ocsigen/reactiveData.git#master"
 }
