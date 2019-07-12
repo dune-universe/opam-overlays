@@ -22,8 +22,9 @@ steps:
   - opam switch 4.07
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
-  - opam update -uy
+  - opam pin add -n dune.1.11.0 https://github.com/ocaml/dune.git
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
+  - opam update -uy
   - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
   - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
   - opam remove -ay
@@ -32,23 +33,56 @@ steps:
   - mkdir /tmp/duniverse-build
   - duniverse init --overlay-remote . --pin duniverse,https://github.com/avsm/duniverse.git --repo /tmp/duniverse-build $PKGS
   - cd /tmp/duniverse-build
-  - duniverse pull 
+  - duniverse pull --yes
   - opam depext -y $PKGS
   - opam install -y dune
   - opam exec -- dune upgrade
-  - echo "(lang dune 1.7)" > dune-workspace
+  - echo "(lang dune 1.11)" > dune-project
+  - echo "(name platform)" >> dune-project
+  - echo "(lang dune 1.11)" > dune-workspace
   - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
   - opam exec -- dune build --profile=release $TARGETS
   - ldd _build/default/duniverse/duniverse/bin/duniverse.exe
   - ldd _build/default/duniverse/ocamlformat/src/ocamlformat.exe
+  - ldd _build/default/duniverse/dune-release/bin/main.exe
+- name: duniverse-vendored
+  image: ocaml/opam2:alpine
+  commands:
+  - sudo chown -R opam .
+  - opam switch 4.07
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add overlays .
+  - opam pin add -n dune https://github.com/ocaml/dune.git
+  - opam pin add -n duniverse https://github.com/avsm/duniverse.git
+  - opam update -uy
+  - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
+  - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
+  - opam remove -ay
+  - git clone git://github.com/avsm/duniverse.git /tmp/duniverse-build
+  - duniverse init --overlay-remote . --pin duniverse,https://github.com/avsm/duniverse.git --repo /tmp/duniverse-build
+  - cd /tmp/duniverse-build
+  - duniverse pull --yes
+  - opam install -y dune
+  - opam exec -- dune upgrade
+  - echo "(lang dune 1.11)" > dune-project
+  - echo "(name duniverse)" >> dune-project
+  - echo "(lang dune 1.11)" > dune-workspace
+  - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
+  - opam exec -- dune build @install
+  - cat duniverse.install
+  - cp _build/install/default/bin/duniverse duniverse.exe
+  - ldd duniverse.exe
+  - ./duniverse.exe --help
 - name: duniverse
   image: ocaml/opam2:4.07
+  failure: ignore
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
-  - opam update -uy
+  - opam pin add -n dune https://github.com/ocaml/dune.git
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
+  - opam update -uy
   - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
   - sudo cp `opam config var bin`/duniverse /usr/bin/duniverse
   - opam pin remove -y duniverse
@@ -57,7 +91,8 @@ steps:
   - mkdir /tmp/duniverse-build
   - duniverse init --overlay-remote . --repo /tmp/duniverse-build $PKGS 
   - cd /tmp/duniverse-build
-  - duniverse pull 
+  - duniverse pull --yes
+  - rm -f duniverse/dune
   - opam depext -y $PKGS
   - opam install -y dune
   - opam exec -- dune upgrade
