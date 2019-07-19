@@ -16,9 +16,9 @@ homepage: "https://opam.ocaml.org"
 bug-reports: "https://github.com/ocaml/opam/issues"
 depends: [
   "ocaml" {>= "4.02.3"}
-  "opam-client" {= "2.0.4+dune"}
+  "opam-client" {=version}
   "cmdliner" {>= "0.9.8"}
-  "dune" {build & >= "1.2.1"}
+  "dune" {>= "1.2.1"}
 ]
 build: [
   ["./configure" "--disable-checks" "--prefix" prefix]
@@ -35,7 +35,7 @@ If you just want to give it a try without altering your current installation, yo
     {success}
 dev-repo: "git+https://github.com/dune-universe/opam.git"
 url {
-  src: "git://github.com/dune-universe/opam.git#duniverse-2.0.4"
+  src: "git://github.com/dune-universe/opam.git#duniverse-2.0.5"
 }
 description:"""
 opam 2.0.0 development version
