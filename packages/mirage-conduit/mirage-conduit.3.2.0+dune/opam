@@ -5,10 +5,10 @@ authors: ["Anil Madhavapeddy" "Thomas Leonard" "Thomas Gazagnaire"]
 license: "ISC"
 tags: "org:mirage"
 homepage: "https://github.com/mirage/ocaml-conduit"
-bug-reports: "https://github.com/TheLortex/ocaml-conduit/issues"
+bug-reports: "https://github.com/dune-universe/ocaml-conduit/issues"
 depends: [
   "ocaml" {>= "4.03.0"}
-  "dune" {build}
+  "dune"
   "ppx_sexp_conv" {< "v0.13"}
   "sexplib" {< "v0.13"}
   "ipaddr" {>="3.0.0"}
@@ -28,7 +28,7 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name] {with-test}
 ]
-dev-repo: "git+https://github.com/TheLortex/ocaml-conduit.git"
+dev-repo: "git+https://github.com/dune-universe/ocaml-conduit.git"
 url {
-  src: "git+https://github.com/TheLortex/ocaml-conduit.git#v1.4.0+fix"
+  src: "git+https://github.com/dune-universe/ocaml-conduit.git#duniverse-v1.5.0"
 }
