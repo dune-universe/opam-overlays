@@ -20,12 +20,11 @@ The typical workflow to port an existing package to dune and publish it on
 1. Create a fork of the upstream package `abc`
 2. Port it to dune on a specific branch `dune-universe-vX.Y.Z`, where `X.Y.Z` corresponds to the upstream
    version you're dunifying. Make sure the opam file has been properly updated and that dune is now part of the package
-   dependencies and the `dev-repo` field is set to your fork.
-3. Tag your port `vX.Y.Z+dune`
-4. Open a PR to `opam-overlays` adding a `packages/abc/abc.X.Y.Z+dune/opam` containing:
+   `depends` field and the `dev-repo` field is set to your fork.
+3. Open a PR to `opam-overlays` adding a `packages/abc/abc.X.Y.Z+dune/opam` containing:
 ```
 url {
-  src: "git+https://github.com/<you_username>/abc#<tag_or_branch_name>"
+  src: "git+https://github.com/<you_username>/abc#<branch_name>"
 }
 ```
 
