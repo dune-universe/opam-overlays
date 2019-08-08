@@ -23,7 +23,7 @@ depends: [
   "cstruct-sexp"
   "sexplib"
   "nocrypto" {>= "0.5.4"}
-  "x509" {>= "0.6.1"}
+  "x509" {>= "0.7.0"}
   "cstruct-unix" {with-test & >= "3.0.0"}
   "ounit" {with-test}
   "lwt" {>="2.4.8"}
@@ -45,5 +45,5 @@ conflicts: [
 tags: [ "org:mirage"]
 synopsis: "Transport Layer Security purely in OCaml"
 url {
-  src: "git://github.com/dune-universe/ocaml-tls.git#duniverse-0.10.2"
+  src: "git://github.com/dune-universe/ocaml-tls.git#duniverse-0.10.3"
 }
