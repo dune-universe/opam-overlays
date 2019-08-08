@@ -23,6 +23,7 @@ depends: [
   "lwt" {>= "2.4.3"}
   "ocaml-freestanding" {>= "0.4.4"}
   "mirage-os-shim"
+  "metrics"
   "lwt-dllist"
   "bheap"
   "logs"
