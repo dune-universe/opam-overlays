@@ -22,7 +22,6 @@ steps:
   - opam switch 4.07
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
-  - opam pin add -n dune.1.11.0 https://github.com/ocaml/dune.git
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - opam update -uy
   - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
@@ -52,7 +51,6 @@ steps:
   - opam switch 4.07
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
-  - opam pin add -n dune https://github.com/ocaml/dune.git
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - opam update -uy
   - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse
@@ -69,7 +67,8 @@ steps:
   - echo "(lang dune 1.11)" > dune-workspace
   - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
   - opam exec -- dune build @install
-  - cat duniverse.install
+  - ls -la
+  - cat duniverse.install || true
   - cp _build/install/default/bin/duniverse duniverse.exe
   - ldd duniverse.exe
   - ./duniverse.exe --help
@@ -80,7 +79,6 @@ steps:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
-  - opam pin add -n dune https://github.com/ocaml/dune.git
   - opam pin add -n duniverse https://github.com/avsm/duniverse.git
   - opam update -uy
   - env OPAMDOWNLOADJOBS=10 opam depext -iy duniverse

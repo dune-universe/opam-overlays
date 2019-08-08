@@ -47,7 +47,7 @@ https://github.com/ocaml/opam-repository, simply remove the port here.
 
 ## Support
 
-Note that the packages on this repository are _not_ the official packages
-and may deviate significantly since they modify the build system.  Use these
-at your own risk, and do not contact upstream authors with issues specific
-to the patches contained here.
+Note that the packages on this repository are _not_ the official packages and
+may deviate significantly since they modify the build system.  Use these at
+your own risk, and do not contact upstream authors with issues specific to the
+patches contained here.
