@@ -45,5 +45,5 @@ conflicts: [
 tags: [ "org:mirage"]
 synopsis: "Transport Layer Security purely in OCaml"
 url {
-  src: "git+https://github.com/dune-universe/ocaml-tls.git#duniverse-0.10.3"
+  src: "git+https://github.com/dune-universe/ocaml-tls.git#duniverse-0.10.4"
 }
