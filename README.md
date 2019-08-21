@@ -51,3 +51,18 @@ Note that the packages on this repository are _not_ the official packages and
 may deviate significantly since they modify the build system.  Use these at
 your own risk, and do not contact upstream authors with issues specific to the
 patches contained here.
+=======
+# Mirage Development OPAM Repository
+
+This is an OPAM repository exporting development versions of
+the [MirageOS](https://mirage.io) libraries.
+
+To make use of the latest, pre-release, in development version of Mirage simply
+add this repo as an OPAM repository and then update and upgrade:
+
+```
+opam repo add mirage-dev https://github.com/mirage/mirage-dev.git
+opam update -yu
+```
+
+See https://ci.mirage.io for tests.
