@@ -40,5 +40,5 @@ build: [
 dev-repo: "git+https://github.com/dune-universe/ocaml-conduit.git"
 synopsis: "A network connection establishment library for MirageOS"
 url {
-  src: "git://github.com/dune-universe/conduit-mirage.git#duniverse-v2.0.1"
+  src: "git://github.com/dune-universe/ocaml-conduit.git#duniverse-v2.0.1"
 }
