@@ -48,6 +48,6 @@ The useful opam packages available that extend this library are:
 """
 dev-repo: "git+https://github.com/dune-universe/ocaml-conduit.git"
 url {
-  src: "git+https://github.com/dune-universe/ocaml-conduit.git#duniverse-v1.5.0"
+  src: "git+https://github.com/dune-universe/ocaml-conduit.git#duniverse-v2.0.1"
 }
 
