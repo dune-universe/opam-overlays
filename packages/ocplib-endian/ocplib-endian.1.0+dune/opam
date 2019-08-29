@@ -3,9 +3,10 @@ authors: "Pierre Chambart"
 maintainer: "pierre.chambart@ocamlpro.com"
 homepage: "https://github.com/OCamlPro/ocplib-endian"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"
   "base-bytes"
+  "bigarray-compat"
   "cppo" {>= "1.1.0"}
 ]
 dev-repo: "git+https://github.com/dune-universe/ocplib-endian.git"

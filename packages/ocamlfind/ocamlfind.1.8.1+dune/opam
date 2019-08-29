@@ -19,6 +19,7 @@ depends: [
   "dune" {build}
   "findlib"
 ]
+setenv: OCAMLPATH = "%{lib}%"
 synopsis: "A library manager for OCaml"
 description: """
 Findlib is a library manager for OCaml. It provides a convention how

@@ -7,8 +7,8 @@ tags: "syntax"
 homepage: "https://github.com/ocaml-ppx/ppx_tools"
 bug-reports: "https://github.com/ocaml-ppx/ppx_tools/issues"
 depends: [
-  "ocaml" {>= "4.06.0"}
-  "dune" {build}
+  "ocaml" {>= "4.08.0"}
+  "dune"
 ]
 build: [
  [ "dune" "subst" ]
@@ -21,6 +21,6 @@ Executables are thus accessible through the ocamlfind driver (e.g.:
 ocamlfind ppx_tools/dumpast).
 """
 url {
-  src: "git://github.com/dune-universe/ppx_tools.git#to-dune"
+  src: "git://github.com/dune-universe/ppx_tools.git#to-dune-4.08"
 }
 

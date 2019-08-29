@@ -1,9 +1,10 @@
 opam-version: "2.0"
+version: "v0.13.0"
 maintainer: "opensource@janestreet.com"
 authors: ["Jane Street Group, LLC <opensource@janestreet.com>"]
 homepage: "https://github.com/janestreet/sexplib"
 bug-reports: "https://github.com/janestreet/sexplib/issues"
-dev-repo: "git+https://github.com/TheLortex/sexplib.git"
+dev-repo: "git+https://github.com/janestreet/sexplib.git"
 doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/sexplib/index.html"
 license: "MIT"
 build: [
@@ -11,11 +12,11 @@ build: [
 ]
 depends: [
   "ocaml"    {>= "4.04.2"}
-  "parsexp"  {>= "v0.12" & < "v0.13"}
-  "sexplib0" {>= "v0.12" & < "v0.13"}
-  "dune"     {build & >= "1.5.1"}
-  "num"
+  "parsexp"  
+  "sexplib0" 
+  "dune"     {>= "1.5.1"}
   "bigarray-compat"
+  "num"
 ]
 synopsis: "Library for serializing OCaml values to and from S-expressions"
 description: "
@@ -25,5 +26,6 @@ OCaml's standard library that was developed by Jane Street, the
 largest industrial user of OCaml.
 "
 url {
-  src: "git+https://github.com/TheLortex/sexplib.git#master"
+  src: "git+https://github.com/dune-universe/sexplib.git#duniverse-v0.13"
 }
+

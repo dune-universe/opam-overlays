@@ -5,7 +5,7 @@ authors:      ["Thomas Gazagnaire" "Anil Madhavapeddy" "Gabriel Radanne"
                "Dave Scott" "David Kaloper" "Hannes Mehnert" "Richard Mortier"]
 homepage:     "https://github.com/mirage/mirage"
 bug-reports:  "https://github.com/mirage/mirage/issues/"
-dev-repo:     "git+https://github.com/TheLortex/mirage.git"
+dev-repo:     "git+https://github.com/dune-universe/mirage.git"
 license:      "ISC"
 tags:         ["org:mirage" "org:xapi-project"]
 doc:          "https://mirage.github.io/mirage/"
@@ -18,7 +18,7 @@ build: [
 
 depends: [
   "ocaml" {>= "4.04.2"}
-  "dune" {build & >= "1.1.0"}
+  "dune" {>= "1.11.0"}
   "ipaddr"             {>= "3.0.0"}
   "functoria-runtime"  {>= "2.2.2"}
   "fmt"
@@ -30,5 +30,5 @@ A bundle of useful runtime functions for applications built with MirageOS
 """
 url {
   src:
-    "git+https://github.com/TheLortex/mirage.git#full-dune"
+    "git+https://github.com/dune-universe/mirage.git#duniverse-master"
 }

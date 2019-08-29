@@ -15,7 +15,7 @@ as `abc` version `X.Y.Z+dune`.
 ## Port a new package/version to dune on `opam-overlays`
 
 The typical workflow to port an existing package to dune and publish it on
-`opam-ovelays` would be the following:
+`opam-overlays` would be the following:
 
 1. Create a fork of the upstream package `abc`
 2. Port it to dune on a specific branch `dune-universe-vX.Y.Z`, where `X.Y.Z` corresponds to the upstream
@@ -51,18 +51,3 @@ Note that the packages on this repository are _not_ the official packages and
 may deviate significantly since they modify the build system.  Use these at
 your own risk, and do not contact upstream authors with issues specific to the
 patches contained here.
-=======
-# Mirage Development OPAM Repository
-
-This is an OPAM repository exporting development versions of
-the [MirageOS](https://mirage.io) libraries.
-
-To make use of the latest, pre-release, in development version of Mirage simply
-add this repo as an OPAM repository and then update and upgrade:
-
-```
-opam repo add mirage-dev https://github.com/mirage/mirage-dev.git
-opam update -yu
-```
-
-See https://ci.mirage.io for tests.

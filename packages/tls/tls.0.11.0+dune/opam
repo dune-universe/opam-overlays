@@ -27,8 +27,8 @@ depends: [
   "cstruct-unix" {with-test & >= "3.0.0"}
   "ounit" {with-test}
   "lwt" {>="2.4.8"}
-  "mirage-flow-lwt"
-  "mirage-kv-lwt"
+  "mirage-flow"
+  "mirage-kv"
   "mirage-clock"
   "ptime"
   "astring" {with-test}
@@ -45,5 +45,5 @@ conflicts: [
 tags: [ "org:mirage"]
 synopsis: "Transport Layer Security purely in OCaml"
 url {
-  src: "git://github.com/hannesm/ocaml-tls.git#awa-future"
+  src: "git://github.com/dune-universe/ocaml-tls.git#awa-future"
 }
