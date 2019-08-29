@@ -30,5 +30,5 @@ The only ASN.1 encodings currently supported are BER and DER.
 asn1-combinators is distributed under the ISC license."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/ocaml-asn1-combinators.git#duniverse-v0.2.0"
+  src: "git://github.com/dune-universe/ocaml-asn1-combinators.git#ba_compat"
 }
