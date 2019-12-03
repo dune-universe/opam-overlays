@@ -35,7 +35,6 @@ steps:
   - duniverse pull --yes
   - opam depext -uy $PKGS
   - opam install -y dune.2.0.0
-  - opam exec -- dune upgrade
   - echo "(lang dune 1.11)" > dune-project
   - echo "(name ocaml-platform)" >> dune-project
   - echo "(lang dune 1.11)" > dune-workspace
@@ -62,7 +61,6 @@ steps:
   - duniverse pull --yes
   - opam depext -uy $PKGS
   - opam install -y dune.2.0.0
-  - opam exec -- dune upgrade
   - opam exec -- dune build @all 
 - name: duniverse-vendored
   image: ocaml/opam2:alpine
