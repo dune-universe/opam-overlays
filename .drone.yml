@@ -30,7 +30,7 @@ steps:
   - PKGS=`./list-platform-binaries.sh -packages`
   - TARGETS=`./list-platform-binaries.sh -targets`
   - mkdir /tmp/duniverse-build
-  - duniverse init --overlay-remote . --pin duniverse,https://github.com/avsm/duniverse.git --repo /tmp/duniverse-build $PKGS
+  - duniverse init --opam-remote . -r /tmp/duniverse-build $PKGS
   - cd /tmp/duniverse-build
   - duniverse pull --yes
   - opam depext -uy $PKGS
@@ -44,6 +44,26 @@ steps:
   - ldd _build/default/duniverse/duniverse/bin/duniverse.exe
   - ldd _build/default/duniverse/ocamlformat/src/ocamlformat.exe
   - ldd _build/default/duniverse/dune-release/bin/main.exe
+- name: duniverse-check-sync
+  image: ocaml/opam2:alpine
+  commands:
+  - sudo chown -R opam .
+  - opam switch 4.08
+  - git -C /home/opam/opam-repository pull origin
+  - opam repo add overlays .
+  - opam update -uy
+  - opam install -y dune.2.0.0
+  - eval `opam env`
+  - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
+  - PKGS=`./list-overrides.sh`
+  - mkdir /tmp/duniverse-build
+  - duniverse init --opam-remote . -r /tmp/duniverse-build $PKGS
+  - cd /tmp/duniverse-build
+  - duniverse pull --yes
+  - opam depext -uy $PKGS
+  - opam install -y dune.2.0.0
+  - opam exec -- dune upgrade
+  - opam exec -- dune build @all 
 - name: duniverse-vendored
   image: ocaml/opam2:alpine
   commands:
@@ -52,7 +72,8 @@ steps:
   - eval `opam env`
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
-  - opam install -y dune
+  - opam update -uy
+  - opam install -y dune.2.0.0
   - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
   - git clone git://github.com/avsm/duniverse /tmp/duniverse-build
   - cd /tmp/duniverse-build
