@@ -8,6 +8,7 @@ platform:
 steps:
 - name: opam
   image: ocaml/opam2:4.08
+  depends_on: [ clone ]
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin
