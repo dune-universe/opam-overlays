@@ -2,7 +2,7 @@
 
 case $1 in
 -targets)
-  echo duniverse/ocamlformat/bin/ocamlformat.exe duniverse/dune-release/bin/main.exe
+  echo duniverse/ocamlformat/src/ocamlformat.exe duniverse/dune-release/bin/main.exe
   ;;
 -packages)
   echo ocamlformat dune-release
