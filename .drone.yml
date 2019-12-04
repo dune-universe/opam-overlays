@@ -40,7 +40,6 @@ steps:
   - echo "(lang dune 1.11)" > dune-workspace
   - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
   - opam exec -- dune build --profile=release $TARGETS
-  - ldd _build/default/duniverse/duniverse/bin/duniverse.exe
   - ldd _build/default/duniverse/ocamlformat/src/ocamlformat.exe
   - ldd _build/default/duniverse/dune-release/bin/main.exe
 - name: duniverse-check-sync
