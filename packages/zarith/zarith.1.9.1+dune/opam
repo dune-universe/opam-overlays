@@ -16,7 +16,8 @@ build: [
 ]
 depends: [
   "ocaml" {>="4.05.0"}
-  "dune" {build & >="1.3"}
+  "dune" {>="1.3"}
+  "dune-configurator"
   "conf-gmp"
   "mirage-no-xen" | ("mirage-xen" & "gmp-xen")
   "mirage-no-solo5" | ("mirage-solo5" & "gmp-freestanding")

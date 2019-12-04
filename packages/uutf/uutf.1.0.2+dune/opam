@@ -8,7 +8,7 @@ bug-reports: "https://github.com/dbuenzli/uutf/issues"
 tags: [ "unicode" "text" "utf-8" "utf-16" "codec" "org:erratique" ]
 license: "ISC"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml" {>= "4.01.0"}
   "uchar"
 ]

@@ -8,7 +8,7 @@ doc: "http://erratique.ch/software/xmlm/doc/Xmlm"
 tags: [ "xml" "codec" "org:erratique" ]
 license: "ISC"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml" {>= "4.02.0"}
 ]
 synopsis: "Streaming XML codec for OCaml"

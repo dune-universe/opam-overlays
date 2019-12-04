@@ -7,9 +7,8 @@ license: "LGPL-2.1 with OCaml linking exception"
 dev-repo: "git+https://github.com/dune-universe/opam-file-format.git"
 synopsis: "Parser and printer for the opam file syntax"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"]
-flags: light-uninstall
 build: [[ "dune" "build" "-p" name ]]
 url {
   src: "git://github.com/dune-universe/opam-file-format.git#duniverse-2.0.0"

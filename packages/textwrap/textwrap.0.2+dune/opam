@@ -6,12 +6,11 @@ bug-reports: "https://github.com/superbobry/ocaml-textwrap/issues"
 dev-repo: "git+https://github.com/dune-universe/ocaml-textwrap.git"
 license: "MIT"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"
 ]
 synopsis: "Text wrapping and filling library"
 description: "An almost complete port of Python's textwrap library to OCaml."
-flags: light-uninstall
 build: [[ "dune" "build" "-p" name ]]
 url {
   src: "git://github.com/dune-universe/ocaml-textwrap.git#duniverse-0.2"
