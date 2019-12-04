@@ -25,4 +25,3 @@ synopsis:
 url {
  src: "git://github.com/dune-universe/num.git#duniverse-v1.3"
 }
-

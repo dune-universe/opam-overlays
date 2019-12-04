@@ -22,7 +22,7 @@ tags: [
   "imperative"
 ]
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"
 ]
 depopts: [
@@ -30,7 +30,6 @@ depopts: [
   "conf-gnomecanvas"
 ]
 synopsis: "A generic graph library for OCaml"
-flags: light-uninstall
 build: [[ "dune" "build" "-p" name ]]
 url {
   src: "git://github.com/dune-universe/ocamlgraph.git#duniverse-v1.8.8"
