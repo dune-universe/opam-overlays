@@ -20,10 +20,10 @@ authors: [
   "Pietro Abate"
 ]
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"
   "cppo" {build}
-  "base-bytes" {build}
+  "base-bytes"
 ]
 synopsis:
   "A complete yet small extension for OCaml standard library (reduced, recommended)"

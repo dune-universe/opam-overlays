@@ -27,7 +27,7 @@ This will make the `ctypes-foreign` ocamlfind subpackage available.
 
 depends: [
   "ocaml" {>= "4.02.3"}
-  "dune"
+  "dune" {>="1.7"}
   "integers"
   "bisect_ppx"
 ]

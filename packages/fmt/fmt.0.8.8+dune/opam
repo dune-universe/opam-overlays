@@ -14,10 +14,8 @@ run-test: [
   [ "dune" "runtest" "-p" name "-j" jobs ]
 ]
 depends: [
-  "dune" {build}
-  "ocaml" {>= "4.03.0"}
-  # Can be removed once ocaml >= 4.07
-  "seq"
+  "dune"
+  "ocaml" {>= "4.07.0"}
   "stdlib-shims"
 ]
 depopts: [ "base-unix" "cmdliner" ]
