@@ -8,7 +8,7 @@ dev-repo: "git+https://github.com/dune-universe/ocaml-asn1-combinators.git"
 bug-reports: "https://github.com/mirleft/ocaml-asn1-combinators/issues"
 tags: [ "org:mirage" ]
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml" {>= "4.02.0"}
   "result"
   "cstruct"
