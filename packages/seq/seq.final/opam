@@ -9,13 +9,10 @@ homepage: "https://github.com/c-cube/seq/"
 bug-reports: "https://github.com/c-cube/seq/issues"
 depends: [
   "dune" {>= "1.1.0"}
+  "ocaml"
 ]
 build: ["dune" "build" "-p" name "-j" jobs]
 dev-repo: "git+https://github.com/c-cube/seq.git"
 url {
-  src: "https://github.com/c-cube/seq/archive/0.2.tar.gz"
-  checksum: [
-    "md5=1d5a9d0aba27b22433f518cdc495d0fd"
-    "sha512=b2571225a18e624b79dad5e1aab91b22e2fda17702f2e23c438b75d2a71e24c55ee8672005f5cc4b17ae79e3b277b1918b71b5d0d674b8b12ea19b3fb2d747cb"
-  ]
+  src: "git+https://github.com/dune-universe/seq.git#duniverse"
 }
