@@ -33,7 +33,7 @@ steps:
   - duniverse init --opam-remote . -r /tmp/duniverse-build $PKGS
   - cd /tmp/duniverse-build
   - duniverse pull --yes
-  - git init
+  - git init && git add . && git commit -a -m initial
   - opam depext -uy $PKGS
   - opam install -y dune.2.0.0
   - echo "(lang dune 1.11)" > dune-project
