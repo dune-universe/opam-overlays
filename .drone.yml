@@ -41,7 +41,7 @@ steps:
   - echo "(lang dune 1.11)" > dune-workspace
   - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
   - opam exec -- dune build --profile=release $TARGETS
-  - for i in $TARGETS; do ldd $i; done
+  - for i in $TARGETS; do ldd _build/default/$i; done
 - name: duniverse-check-sync
   image: ocaml/opam2:alpine
   commands:
