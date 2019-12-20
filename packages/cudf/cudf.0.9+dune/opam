@@ -5,7 +5,7 @@ homepage: "http://www.mancoosi.org/cudf/"
 bug-reports: "https://gforge.inria.fr/tracker/?atid=13811&group_id=4385&func=browse"
 dev-repo: "git+https://github.com/dune-universe/cudf.git"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"
   "conf-perl" {build}
   ("extlib" | "extlib-compat")

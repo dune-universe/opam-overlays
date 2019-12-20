@@ -1,6 +1,6 @@
 opam-version: "2.0"
 homepage:     "https://github.com/mirleft/ocaml-nocrypto"
-dev-repo:     "git+https://github.com/TheLortex/ocaml-nocrypto.git"
+dev-repo:     "git+https://github.com/dune-universe/ocaml-nocrypto.git"
 bug-reports:  "https://github.com/mirleft/ocaml-nocrypto/issues"
 doc:          "https://mirleft.github.io/ocaml-nocrypto/doc"
 authors:      ["David Kaloper <david@numm.org>"]
@@ -8,7 +8,7 @@ maintainer:   "David Kaloper <david@numm.org>"
 license:      "ISC"
 tags:          [ "org:mirage" ]
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml" {>= "4.02.0"}
   "cpuid"
   "ppx_deriving"
@@ -35,5 +35,5 @@ RSA timing attacks are countered by blinding. AES timing attacks are avoided by
 delegating to AES-NI."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/TheLortex/ocaml-nocrypto.git#dune"
+  src: "git://github.com/dune-universe/ocaml-nocrypto.git#duniverse-master"
 }

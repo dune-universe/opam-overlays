@@ -7,6 +7,10 @@ that haven't been or won't be ported upstream in a near future.
 It's meant to be used by the `duniverse` tool to allow you to vendor your
 dependencies and build your entire project using `dune` only.
 
+There is a merged repository that the `duniverse` tool uses which is a standalone
+opam repository at <https://github.com/dune-universe/opam-repository> (in the
+`duniverse` branch).
+
 All packages' versions in this repository are suffixed with a `+dune` to
 distinguish them from the upstream variants. That means that the
 `opam-overlays` port of package `abc` version `X.Y.Z` is available on this repo
@@ -15,7 +19,7 @@ as `abc` version `X.Y.Z+dune`.
 ## Port a new package/version to dune on `opam-overlays`
 
 The typical workflow to port an existing package to dune and publish it on
-`opam-ovelays` would be the following:
+`opam-overlays` would be the following:
 
 1. Create a fork of the upstream package `abc`
 2. Port it to dune on a specific branch `dune-universe-vX.Y.Z`, where `X.Y.Z` corresponds to the upstream

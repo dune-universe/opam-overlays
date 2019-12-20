@@ -15,7 +15,7 @@ bug-reports: "https://gforge.inria.fr/tracker/?group_id=4395"
 license: "LGPL-v3+ with OCaml linking exception"
 dev-repo: "git+https://github.com/dune-universe/dose3.git"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml"
   "ocamlgraph" {>= "1.8.6"}
   "cudf" {>= "0.7"}

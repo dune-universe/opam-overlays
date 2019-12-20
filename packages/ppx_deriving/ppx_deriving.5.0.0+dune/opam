@@ -14,14 +14,14 @@ build: [
   ["dune" "build" "@doc" "-p" name "-j" jobs] {with-doc}
 ]
 depends: [
-  "dune"     {build >= "1.0.0"}
-  "cppo"     {build}
-  "ppxfind"  {build}
+  "dune"
+  "cppo" {build}
+  "ppxfind" {build}
   "ocaml-migrate-parsetree"
   "ppx_derivers"
   "ppx_tools"  {>= "4.02.3"}
   "result"
-  "ounit"      {with-test}
+  "ounit" {with-test}
   "ocaml" {>= "4.02"}
 ]
 synopsis: "Type-driven code generation for OCaml >=4.02"

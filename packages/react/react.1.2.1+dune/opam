@@ -8,7 +8,7 @@ bug-reports: "https://github.com/dbuenzli/react/issues"
 tags: [ "reactive" "declarative" "signal" "event" "frp" "org:erratique" ]
 license: "ISC"
 depends: [
-  "dune" {build}
+  "dune"
   "ocaml" {>= "4.01.0"}
 ]
 synopsis: "Declarative events and signals for OCaml"
