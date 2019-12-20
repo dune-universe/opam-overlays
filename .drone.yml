@@ -35,7 +35,7 @@ steps:
   - duniverse pull --yes
   - git init && git add . && git commit -a -m initial
   - opam depext -uy $PKGS
-  - opam install -y dune.2.0.0
+  - opam install -y dune
   - echo "(lang dune 1.11)" > dune-project
   - echo "(name ocaml-platform)" >> dune-project
   - echo "(lang dune 1.11)" > dune-workspace
@@ -50,7 +50,7 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
-  - opam install -y dune.2.0.0
+  - opam install -y dune
   - eval `opam env`
   - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
   - PKGS=`./list-overrides.sh`
@@ -59,7 +59,7 @@ steps:
   - cd /tmp/duniverse-build
   - duniverse pull --yes
   - opam depext -uy $PKGS
-  - opam install -y dune.2.0.0
+  - opam install -y dune
   - opam exec -- dune build @all 
 - name: duniverse-vendored
   image: ocaml/opam2:alpine
@@ -70,7 +70,7 @@ steps:
   - git -C /home/opam/opam-repository pull origin
   - opam repo add overlays .
   - opam update -uy
-  - opam install -y dune.2.0.0
+  - opam install -y dune
   - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
   - git clone git://github.com/avsm/duniverse /tmp/duniverse-build
   - cd /tmp/duniverse-build
