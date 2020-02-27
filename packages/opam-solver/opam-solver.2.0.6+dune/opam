@@ -17,6 +17,9 @@ bug-reports: "https://github.com/ocaml/opam/issues"
 depends: [
   "ocaml" {>= "4.02.3"}
   "opam-format" {=version}
+  "mccs" {>= "1.1+9"}
+  "dose3" {>= "5"}
+  "cudf" {>= "0.7"}
   "dune" {>= "1.2.1"}
 ]
 build: [
@@ -25,11 +28,11 @@ build: [
 ]
 dev-repo: "git+https://github.com/dune-universe/opam.git"
 url {
-  src: "git://github.com/dune-universe/opam.git#duniverse-2.0.5"
+  src: "git://github.com/dune-universe/opam.git#duniverse-2.0.6"
 }
 description:"""
 opam 2.0 development libraries
 
-This library includes repository and remote sources handling, including
-curl/wget, rsync, git, mercurial, darcs backends.
+Solver and Cudf interaction. This library is based on the Cudf and Dose
+libraries, and handles calls to the external solver from opam.
 """

@@ -21,7 +21,6 @@ depends: [
   "vchan" {>= "5.0.0"}
   "xenstore"
   "tls" {>= "0.8.0"}
-  "tls-mirage"
   "ipaddr" {>= "3.0.0"}
   "ipaddr-sexp"
 
