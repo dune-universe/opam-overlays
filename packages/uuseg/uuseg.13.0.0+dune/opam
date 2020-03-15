@@ -10,7 +10,7 @@ license: "ISC"
 depends: [ "ocaml" {>= "4.01.0"}
            "dune"
            "uchar"
-           "uucp" {>= "12.0.0" & < "13.0.0"}
+           "uucp" {>= "13.0.0" & < "14.0.0"}
            "uutf"
 ]
 conflicts: [ "uutf" {< "1.0.0"} ]
@@ -27,5 +27,5 @@ detect grapheme cluster, word and sentence boundaries and the
 opportunities.
 """
 url {
-  src: "git://github.com/dune-universe/uuseg.git#duniverse-v12.0.0"
+  src: "git://github.com/dune-universe/uuseg.git#duniverse-v13.0.0"
 }
