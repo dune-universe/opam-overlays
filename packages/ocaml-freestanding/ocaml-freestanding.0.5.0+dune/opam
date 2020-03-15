@@ -5,7 +5,7 @@ homepage: "https://github.com/mirage/ocaml-freestanding"
 bug-reports: "https://github.com/mirage/ocaml-freestanding/issues/"
 license: "MIT"
 tags: "org:mirage"
-dev-repo: "git+https://github.com/dune-universe/ocaml-freestanding.git"
+dev-repo: "git+https://github.com/mirage/ocaml-freestanding.git"
 build: [make]
 install: [make "install" "PREFIX=%{prefix}%"]
 remove: [make "uninstall" "PREFIX=%{prefix}%"]
@@ -13,8 +13,8 @@ depends: [
   "conf-pkg-config"
   "ocamlfind" {build}
   "ocaml-src" {build}
-  ("solo5-bindings-hvt" | "solo5-bindings-virtio" | "solo5-bindings-muen" | "solo5-bindings-genode")
-  "ocaml" {>= "4.05.0" & < "4.09.0"}
+  ("solo5-bindings-hvt" | "solo5-bindings-spt" | "solo5-bindings-virtio" | "solo5-bindings-muen" | "solo5-bindings-genode")
+  "ocaml" {>= "4.06.0" & < "4.11.0"}
 ]
 substs: [
   "flags/cflags.tmp"
@@ -25,10 +25,6 @@ conflicts: [
   "solo5-kernel-ukvm"
   "solo5-kernel-virtio"
   "solo5-kernel-muen"
-  "solo5-bindings-hvt" {>="0.6.0"}
-  "solo5-bindings-virtio" {>="0.6.0"}
-  "solo5-bindings-muen" {>="0.6.0"}
-  "solo5-bindings-genode" {>="0.6.0"}
 ]
 available: [
   ((os = "linux" & (arch = "x86_64" | arch = "arm64"))
@@ -41,3 +37,4 @@ description:
 url {
   src: "git+https://github.com/dune-universe/ocaml-freestanding.git#duniverse-master"
 }
+
