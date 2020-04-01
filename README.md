@@ -4,12 +4,13 @@
 definitions of dune ports of existing packages from the main default repository
 that haven't been or won't be ported upstream in a near future.
 
-It's meant to be used by the `duniverse` tool to allow you to vendor your
-dependencies and build your entire project using `dune` only.
+It's meant to be used by the [`duniverse`](https://github.com/ocamllabs/dune-universe)
+tool to allow you to vendor your dependencies and build your entire project
+using `dune` only.
 
-There is a merged repository that the `duniverse` tool uses which is a standalone
-opam repository at <https://github.com/dune-universe/opam-repository> (in the
-`duniverse` branch).
+There is a merged repository that the `duniverse` tool uses which is a
+standalone opam repository at
+<https://github.com/dune-universe/opam-repository> (in the `duniverse` branch).
 
 All packages' versions in this repository are suffixed with a `+dune` to
 distinguish them from the upstream variants. That means that the
