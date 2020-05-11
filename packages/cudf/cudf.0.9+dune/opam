@@ -7,8 +7,7 @@ dev-repo: "git+https://github.com/dune-universe/cudf.git"
 depends: [
   "dune"
   "ocaml"
-  "conf-perl" {build}
-  ("extlib" | "extlib-compat")
+  "extlib"
 ]
 synopsis: "CUDF library (part of the Mancoosi tools)"
 description: """
