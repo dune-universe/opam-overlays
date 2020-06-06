@@ -7,7 +7,7 @@ platform:
 
 steps:
 - name: opam
-  image: ocaml/opam2:4.08
+  image: ocaml/opam2:4.10
   depends_on: [ clone ]
   commands:
   - sudo chown -R opam .
@@ -16,78 +16,8 @@ steps:
   - opam update -uy
   - opam exec -- ocaml -version
   - env OPAMERRLOGLEN=0 OPAMJOBS=40 opam --yes depext -uiy `./list-overrides.sh`
-- name: platform
-  image: ocaml/opam2:alpine
-  commands:
-  - sudo chown -R opam .
-  - opam switch 4.08
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add overlays .
-  - opam update -uy
-  - opam install -y dune
-  - eval `opam env`
-  - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
-  - PKGS=`./list-platform-binaries.sh -packages`
-  - TARGETS=`./list-platform-binaries.sh -targets`
-  - mkdir /tmp/duniverse-build
-  - duniverse init --opam-remote . -r /tmp/duniverse-build $PKGS
-  - cd /tmp/duniverse-build
-  - duniverse pull --yes
-  - git init && git add . && git commit -a -m initial
-  - opam depext -uy $PKGS
-  - opam install -y dune
-  - echo "(lang dune 1.11)" > dune-project
-  - echo "(name ocaml-platform)" >> dune-project
-  - echo "(lang dune 1.11)" > dune-workspace
-  - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
-  - opam exec -- dune build --profile=release $TARGETS
-  - for i in $TARGETS; do ldd _build/default/$i; done
-- name: duniverse-check-sync
-  image: ocaml/opam2:alpine
-  commands:
-  - sudo chown -R opam .
-  - opam switch 4.08
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add overlays .
-  - opam update -uy
-  - opam install -y dune
-  - eval `opam env`
-  - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
-  - PKGS=`./list-overrides.sh`
-  - mkdir /tmp/duniverse-build
-  - duniverse init --opam-remote . -r /tmp/duniverse-build $PKGS
-  - cd /tmp/duniverse-build
-  - duniverse pull --yes
-  - opam depext -uy $PKGS
-  - opam install -y dune
-  - opam exec -- dune build @all 
-- name: duniverse-vendored
-  image: ocaml/opam2:alpine
-  commands:
-  - sudo chown -R opam .
-  - opam switch 4.08
-  - eval `opam env`
-  - git -C /home/opam/opam-repository pull origin
-  - opam repo add overlays .
-  - opam update -uy
-  - opam install -y dune
-  - git clone git://github.com/avsm/duniverse /tmp/duniverse && make -C /tmp/duniverse && sudo make -C /tmp/duniverse install PREFIX=/usr/bin && rm -rf /tmp/duniverse
-  - git clone git://github.com/avsm/duniverse /tmp/duniverse-build
-  - cd /tmp/duniverse-build
-  - duniverse pull --yes
-  - opam install -y dune
-  - opam exec -- dune upgrade
-  - echo "(lang dune 1.11)" > dune-project
-  - echo "(name duniverse)" >> dune-project
-  - echo "(lang dune 1.11)" > dune-workspace
-  - echo "(env (_ (flags -cclib -static)))" >> dune-workspace
-  - opam exec -- dune build @install
-  - cat duniverse.install || true
-  - cp _build/install/default/bin/duniverse duniverse.exe
-  - ldd duniverse.exe
-  - ./duniverse.exe --help
 - name: outofdate
-  image: ocaml/opam2:4.08
+  image: ocaml/opam2:4.10
   commands:
   - sudo chown -R opam .
   - git -C /home/opam/opam-repository pull origin

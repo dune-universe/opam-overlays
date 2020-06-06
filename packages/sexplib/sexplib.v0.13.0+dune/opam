@@ -12,8 +12,8 @@ build: [
 ]
 depends: [
   "ocaml"    {>= "4.04.2"}
-  "parsexp"  
-  "sexplib0" 
+  "parsexp"  {>= "v0.13.0" & < "v0.14.0"}
+  "sexplib0" {>= "v0.13.0" & < "v0.14.0"}
   "dune"     {>= "1.5.1"}
   "bigarray-compat"
   "num"
