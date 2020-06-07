@@ -16,22 +16,25 @@ homepage: "https://opam.ocaml.org/"
 bug-reports: "https://github.com/ocaml/opam/issues"
 depends: [
   "ocaml" {>= "4.02.3"}
-  "opam-state" {=version} 
-  "opam-solver" {=version}
-  "re" {>= "1.7.2"}
-  "cmdliner" {>= "0.9.8"}
-  "dune" {>="1.2.1"}
+  "base-unix"
+  "base-bigarray"
+  "ocamlgraph"
+  "re" {>= "1.5.0"}
+  "dune" {>= "1.2.1"}
+  "cppo" {build}
 ]
+conflicts: ["extlib-compat"]
 build: [
   ["./configure" "--disable-checks" "--prefix" prefix]
   [make "%{name}%.install"]
 ]
 dev-repo: "git+https://github.com/dune-universe/opam.git"
 url {
-  src: "git://github.com/dune-universe/opam.git#duniverse-2.0.6"
+  src: "git://github.com/dune-universe/opam.git#duniverse-2.0.7"
 }
 description:"""
 opam 2.0 development libraries
 
-Actions on the opam root, switches, installations, and front-end.
+Small standard library extensions, and generic system interaction modules used
+by opam.
 """
