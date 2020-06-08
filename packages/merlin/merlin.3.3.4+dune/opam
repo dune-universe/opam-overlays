@@ -62,5 +62,5 @@ See https://github.com/OCamlPro/opam-user-setup
   {success & !user-setup:installed}
 ]
 url {
-  src: "git+https://github.com/dune-universe/merlin.git#fix-release-profile-build
+  src: "git+https://github.com/dune-universe/merlin.git#fix-release-profile-build"
 }
