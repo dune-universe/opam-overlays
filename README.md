@@ -50,6 +50,11 @@ sure to fix it in the `packages/abc/abc.X.Y.Z+dune/opam`.
 When the dune version is merged upstream to
 https://github.com/ocaml/opam-repository, simply remove the port here.
 
+## Merging to live duniverse
+
+Run `./merge-to-opam-repo <repodir>` and it will push to dune-universe/opam-repository
+and rebase the `duniverse` branch.
+
 ## Support
 
 Note that the packages on this repository are _not_ the official packages and
