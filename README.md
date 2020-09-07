@@ -29,7 +29,7 @@ The typical workflow to port an existing package to dune and publish it on
 3. Open a PR to `opam-overlays` adding a `packages/abc/abc.X.Y.Z+dune/opam` containing:
 ```
 url {
-  src: "git+https://github.com/<your_username>/abc#<branch_name>"
+  src: "git+https://github.com/<your_username>/abc.git#<branch_name>"
 }
 ```
 
