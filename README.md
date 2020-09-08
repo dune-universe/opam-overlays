@@ -29,7 +29,7 @@ The typical workflow to port an existing package to dune and publish it on
 3. Open a PR to `opam-overlays` adding a `packages/abc/abc.X.Y.Z+dune/opam` containing:
 ```
 url {
-  src: "git+https://github.com/<you_username>/abc#<branch_name>"
+  src: "git+https://github.com/<your_username>/abc.git#<branch_name>"
 }
 ```
 
@@ -39,7 +39,7 @@ verified by the CI.
 
 ## Release an existing port to `opam-overlays`
 
-This is basically done by jumping straight to the above step `4` using the tag
+This is basically done by jumping straight to the above step `3` using the tag
 or branch under which the dune port lives in the forked repo.
 
 If the opam file's `dev_repo` and `depends` haven't been properly updated, make
