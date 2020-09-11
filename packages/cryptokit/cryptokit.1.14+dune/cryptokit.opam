@@ -33,6 +33,7 @@ build: [
   ]
 ]
 dev-repo: "git+https://github.com/snowleopard/cryptokit.git"
+
 url {
   src: "git+https://github.com/snowleopard/cryptokit.git#dune-universe-v1.14"
 }
