@@ -4,7 +4,7 @@
 definitions of dune ports of existing packages from the main default repository
 that haven't been or won't be ported upstream in a near future.
 
-It's meant to be used by the [`duniverse`](https://github.com/ocamllabs/dune-universe)
+It's meant to be used by the [`opam-monorepo`](https://github.com/ocamllabs/dune-universe)
 tool to allow you to vendor your dependencies and build your entire project
 using `dune` only.
 
