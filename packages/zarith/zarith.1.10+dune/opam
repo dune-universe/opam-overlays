@@ -30,5 +30,5 @@ arbitrary-precision integers. It uses GMP to efficiently implement
 arithmetic over big integers. Small integers are represented as Caml
 unboxed integers, for speed and space economy."""
 url {
-  src: "git://github.com/dune-universe/Zarith.git#duniverse-1.9.1"
+  src: "git://github.com/dune-universe/Zarith.git#duniverse-1.10"
 }
