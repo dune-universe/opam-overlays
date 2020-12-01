@@ -31,5 +31,6 @@ Webbrowser is distributed under the ISC license.
 [cmdliner]: http://erratique.ch/software/cmdliner"""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/webbrowser.git#duniverse-v0.6.1"
+  src: "https://github.com/dune-universe/webbrowser/archive/v0.6.1+dune.tar.gz"
+  checksum: "sha256=5e6e62264595ddb55f1796c6621da1625f85b909e5952df26f5bfac1a10b2ac0"
 }

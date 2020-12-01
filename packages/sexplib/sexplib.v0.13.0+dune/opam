@@ -26,6 +26,7 @@ OCaml's standard library that was developed by Jane Street, the
 largest industrial user of OCaml.
 "
 url {
-  src: "git+https://github.com/dune-universe/sexplib.git#duniverse-v0.13"
+  src: "https://github.com/dune-universe/sexplib/archive/vv0.13.0+dune.tar.gz"
+  checksum: "sha256=34815208e57a0f7a7cbed925c534782c7adda49b0d8a50a109d46d6c9d08d3be"
 }
 

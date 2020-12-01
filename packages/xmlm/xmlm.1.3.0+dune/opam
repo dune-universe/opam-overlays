@@ -21,5 +21,6 @@ Xmlm is made of a single independent module and distributed
 under the ISC license."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/xmlm.git#duniverse-v1.3.0"
+  src: "https://github.com/dune-universe/xmlm/archive/v1.3.0+dune.tar.gz"
+  checksum: "sha256=ed663d01178a07a3345bd20004ec95487dd2846f5b9db06ff0e14334d8fdda63"
 }

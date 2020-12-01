@@ -13,5 +13,6 @@ synopsis: "Text wrapping and filling library"
 description: "An almost complete port of Python's textwrap library to OCaml."
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/ocaml-textwrap.git#duniverse-0.2"
+  src: "https://github.com/dune-universe/ocaml-textwrap/archive/v0.2+dune.tar.gz"
+  checksum: "sha256=a8ff845d1221be6a8d65974595ef1a332b584c749208abcbbce58beb3e30e498"
 }

@@ -11,5 +11,6 @@ depends: [
   "ocaml"]
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/opam-file-format.git#duniverse-2.0.0"
+  src: "https://github.com/dune-universe/opam-file-format/archive/v2.0.0+dune.tar.gz"
+  checksum: "sha256=01de9b53829d6bac70a97f538f1d600e974d0382e3e5d3f245dee3be88f3c350"
 }

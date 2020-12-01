@@ -19,5 +19,6 @@ build: [
  [ "dune" "build" "-p" name "-j" jobs]
 ]
 url {
-  src: "git://github.com/dune-universe/uucp.git#duniverse-v13.0.0"
+  src: "https://github.com/dune-universe/uucp/archive/v13.0.0+dune.tar.gz"
+  checksum: "sha256=ea56f5d6d97dde8442c8678c6adda7b2a8353c22ac0486e8f9f434eb8923591f"
 }

@@ -38,5 +38,6 @@ distributed under the ISC license.
 [logs]: http://erratique.ch/software/logs"""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/bos.git#duniverse-v0.2.0"
+  src: "https://github.com/dune-universe/bos/archive/v0.2.0+dune.tar.gz"
+  checksum: "sha256=d59c3a3af92a0d04ba8c66c19e69226a87576cd5ccd5bbea4d7fa1b00d5cc0d4"
 }

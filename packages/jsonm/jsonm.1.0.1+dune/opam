@@ -27,5 +27,6 @@ under the ISC license.
 [uutf]: http://erratique.ch/software/uutf"""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/jsonm.git#duniverse-v1.0.1"
+  src: "https://github.com/dune-universe/jsonm/archive/v1.0.1+dune.tar.gz"
+  checksum: "sha256=cb82b2742662636029644db0354a8ff028b9e7495d4fe5278ddef72656b88d1b"
 }

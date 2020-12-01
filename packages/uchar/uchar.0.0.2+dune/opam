@@ -10,5 +10,6 @@ license: "typeof OCaml system"
 depends: [ "dune" "ocaml" {>= "4.03"} ]
 synopsis: "Dummy but non virtual package to satisfy both opam-monorepo and opam"
 url {
-  src: "git+https://github.com/dune-universe/uchar.git#dune-universe-v0.0.2"
+  src: "https://github.com/dune-universe/uchar/archive/v0.0.2+dune.tar.gz"
+  checksum: "sha256=ddd2dac470c4aa8e8d6163a2fceb82c4a7725693a0d92c5f4834bd4258e659dc"
 }

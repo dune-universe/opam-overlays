@@ -16,5 +16,6 @@ describing upgrade scenarios in package-based Free and Open Source
 Software distribution."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/cudf.git#duniverse-0.9"
+  src: "https://github.com/dune-universe/cudf/archive/v0.9+dune.tar.gz"
+  checksum: "sha256=a7f966166d44563c6df9947578a4bade48623617a387d43a5577edabc5b5d7b4"
 }

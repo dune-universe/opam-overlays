@@ -19,5 +19,6 @@ The PDF is available at
 <https://www.lri.fr/~filliatr/ftp/publis/hash-consing2.pdf>"""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/ocaml-hashcons.git#duniverse-1.3"
+  src: "https://github.com/dune-universe/ocaml-hashcons/archive/v1.3+dune.tar.gz"
+  checksum: "sha256=639485859b5a2bf8ad3ee9ff87d7e2e83a14ae65bd2e2c07ec6ee0ca7aa2283a"
 }

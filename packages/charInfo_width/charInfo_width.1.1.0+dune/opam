@@ -22,5 +22,6 @@ description: """
 This module is implemented purely in OCaml and the width function follows the prototype of POSIX's wcwidth."""
 
 url {
-  src: "git://github.com/dune-universe/charinfo_width.git#duniverse-1.1.0"
+  src: "https://github.com/dune-universe/charInfo_width/archive/v1.1.0+dune.tar.gz"
+  checksum: "sha256=3ce997c9dc0c1397ce93ea4b12efdb12d0aca339ad1eba7f66c12a45757e2dc8"
 }

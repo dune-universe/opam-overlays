@@ -29,5 +29,6 @@ and its libraries are distributed under the ISC license.
 [jsoo]: http://ocsigen.org/js_of_ocaml/"""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/mtime.git#duniverse-v1.2.0"
+  src: "https://github.com/dune-universe/mtime/archive/v1.2.0+dune.tar.gz"
+  checksum: "sha256=92435c47ba03ddbe18793383551e306bcaaecc7191db901dc34707b5c4b4eaf0"
 }
