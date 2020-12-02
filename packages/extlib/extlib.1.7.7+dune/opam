@@ -34,5 +34,6 @@ safety (tail-recursive) and also to provide new modules which should be useful
 for day to day programming."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/ocaml-extlib.git#duniverse-1.7.7"
+  src: "https://github.com/dune-universe/ocaml-extlib/archive/v1.7.7+dune.tar.gz"
+  checksum: "sha256=529aa86b380330f962500a615efa29deb5115247ec3ab65fa1916619221d1ae1"
 }

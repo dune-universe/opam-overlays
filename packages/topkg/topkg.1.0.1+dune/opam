@@ -39,5 +39,6 @@ Topkg-care is distributed under the ISC license it depends on
 """
 build: [[ "dune" "build" "-p" name "-j" jobs ]]
 url {
-  src: "git://github.com/dune-universe/topkg.git#duniverse-v1.0.1"
+  src: "https://github.com/dune-universe/topkg/archive/v1.0.1+dune.tar.gz"
+  checksum: "sha256=fd8094acbcf223b4702d1bbcde07b3ec4024a0ad35168ab95e06f44df48489b0"
 }

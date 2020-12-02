@@ -29,5 +29,6 @@ Astring depends only on the OCaml standard library. It is distributed
 under the ISC license."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/astring.git#duniverse-v0.8.4"
+  src: "https://github.com/dune-universe/astring/archive/v0.8.4+dune.tar.gz"
+  checksum: "sha256=f033789895d92081d9926880c5fe364f925576b2236cb179ad85bf7b8dc84efb"
 }

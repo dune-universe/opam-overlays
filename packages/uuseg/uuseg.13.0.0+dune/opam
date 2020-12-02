@@ -27,5 +27,6 @@ detect grapheme cluster, word and sentence boundaries and the
 opportunities.
 """
 url {
-  src: "git://github.com/dune-universe/uuseg.git#duniverse-v13.0.0"
+  src: "https://github.com/dune-universe/uuseg/archive/v13.0.0+dune.tar.gz"
+  checksum: "sha256=cba1bec0e38ce727671713a6b341502b899e71fe6849460c87d3548c7ec52399"
 }

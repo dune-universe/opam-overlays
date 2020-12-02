@@ -25,5 +25,6 @@ distributed under the ISC license.
 """
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/rresult.git#duniverse-v0.6.0"
+  src: "https://github.com/dune-universe/rresult/archive/v0.6.0+dune.tar.gz"
+  checksum: "sha256=041a484d68f72db3a742d6045bc6ff2b3a36efe629c7683dd58a377b1fa5c477"
 }

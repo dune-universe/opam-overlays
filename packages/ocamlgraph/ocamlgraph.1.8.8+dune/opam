@@ -32,5 +32,6 @@ depopts: [
 synopsis: "A generic graph library for OCaml"
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/ocamlgraph.git#duniverse-v1.8.8"
+  src: "https://github.com/dune-universe/ocamlgraph/archive/v1.8.8+dune.tar.gz"
+  checksum: "sha256=0170bfa2dcb692bdd6c2fb178767064ea0ddfb79bd205a564dffff648c3f731a"
 }

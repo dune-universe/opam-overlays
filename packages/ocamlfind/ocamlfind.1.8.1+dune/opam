@@ -29,5 +29,6 @@ interpreting the META files, so that it is very easy to use libraries
 in programs and scripts."""
 authors: "Gerd Stolpmann <gerd@gerd-stolpmann.de>"
 url {
-  src: "git+https://github.com/dune-universe/lib-findlib#duniverse-1.8.1"
+  src: "https://github.com/dune-universe/lib-findlib/archive/v1.8.1+dune.tar.gz"
+  checksum: "sha256=1a337aaedca94837d4d6a1689ed18109e4a2cfd4aa99a56252a6f19fe1291bb0"
 }

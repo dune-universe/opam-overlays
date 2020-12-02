@@ -24,5 +24,6 @@ React is made of a single, independent, module and distributed under
 the ISC license."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/react.git#duniverse-v1.2.1"
+  src: "https://github.com/dune-universe/react/archive/v1.2.1+dune.tar.gz"
+  checksum: "sha256=ddcba6c986bae065e9f98f39dc40c4f90345ecc31ed6215754bb2a79f8acb5a3"
 }

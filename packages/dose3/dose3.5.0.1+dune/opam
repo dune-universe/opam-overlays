@@ -28,5 +28,6 @@ conflicts: "dose"
 synopsis: "Dose library (part of Mancoosi tools)"
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/dose3.git#duniverse-5.0.1"
+  src: "https://github.com/dune-universe/dose3/archive/v5.0.1+dune.tar.gz"
+  checksum: "sha256=67a77a2e7f6961eeeb5f7f4128f4c02ee970d1a98694db8242260cda0b358f77"
 }

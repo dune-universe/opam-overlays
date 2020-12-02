@@ -21,6 +21,7 @@ Executables are thus accessible through the ocamlfind driver (e.g.:
 ocamlfind ppx_tools/dumpast).
 """
 url {
-  src: "git://github.com/dune-universe/ppx_tools.git#duniverse-master"
+  src: "https://github.com/dune-universe/ppx_tools/archive/v7.0+dune.tar.gz"
+  checksum: "sha256=81c8682df91896e4f6fa3d2303b3ee5574e94f82c0960b69e6f0ebffdea9e524"
 }
 

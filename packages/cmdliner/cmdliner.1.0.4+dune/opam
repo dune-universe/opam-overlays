@@ -28,5 +28,6 @@ Cmdliner has no dependencies and is distributed under the ISC license.
 """
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/cmdliner.git#duniverse-v1.0.4"
+  src: "https://github.com/dune-universe/cmdliner/archive/v1.0.4+dune.tar.gz"
+  checksum: "sha256=ffc09f07a9e394d6be4dbecea7add601ff00519a91dff4c95b9cd0a4aa60eceb"
 }

@@ -21,5 +21,6 @@ pretty-printers for the data types.
 asetmap has no dependency is distributed under the ISC license."""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "git://github.com/dune-universe/asetmap.git#duniverse-v0.8.1"
+  src: "https://github.com/dune-universe/asetmap/archive/v0.8.1+dune.tar.gz"
+  checksum: "sha256=45883d0fd0f1653afa59eb25c36d8b56c15f9f4c950212140d95bd5267cfd810"
 }
