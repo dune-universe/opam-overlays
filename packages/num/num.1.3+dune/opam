@@ -23,6 +23,6 @@ conflicts: [ "base-num" ]
 synopsis:
   "The legacy Num library for arbitrary-precision integer and rational arithmetic"
 url {
-  src: "https://github.com/dune-universe/num/archive/v1.3+dune.tar.gz"
-  checksum: "sha256=29716f41349bd408e46b676a518464576003cc0e38929975e411c31a5c374728"
+  src: "https://github.com/dune-universe/num/archive/v1.3+dune-2.tar.gz"
+  checksum: "sha256=32156376be05260eb72f651ae33df41fe0af03ad322bee29a10495efadfb2d1d"
 }
