@@ -8,7 +8,7 @@ authors: [
 homepage: "http://ocamlgraph.lri.fr/"
 license: "GNU Library General Public License version 2.1"
 doc: ["http://ocamlgraph.lri.fr/doc"]
-dev-repo: "git+https://github.com/dune-universe/ocamlgraph.git"
+dev-repo: "git+https://github.com/dune-universe/ocamlgraph.git#duniverse-v1.8.8"
 bug-reports: "https://github.com/backtracking/ocamlgraph/issues"
 
 tags: [

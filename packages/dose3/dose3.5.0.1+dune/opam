@@ -13,7 +13,7 @@ authors: [
 homepage: "http://www.mancoosi.org/software/"
 bug-reports: "https://gforge.inria.fr/tracker/?group_id=4395"
 license: "LGPL-v3+ with OCaml linking exception"
-dev-repo: "git+https://github.com/dune-universe/dose3.git"
+dev-repo: "git+https://github.com/dune-universe/dose3.git#duniverse-5.0.1"
 depends: [
   "dune"
   "ocaml"

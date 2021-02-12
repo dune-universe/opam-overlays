@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/bos"
 doc: "http://erratique.ch/software/bos/doc"
-dev-repo: "git+https://github.com/dune-universe/bos.git"
+dev-repo: "git+https://github.com/dune-universe/bos.git#duniverse-v0.2.0"
 bug-reports: "https://github.com/dbuenzli/bos/issues"
 tags: [ "os" "system" "cli" "command" "file" "path" "log" "unix" "org:erratique" ]
 license: "ISC"

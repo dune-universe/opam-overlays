@@ -3,7 +3,7 @@ maintainer: "roberto@dicosmo.org"
 authors: ["Roberto di Cosmo <roberto@dicosmo.org>" "Stefano Zacchiroli" "Pietro Abate"]
 homepage: "http://www.mancoosi.org/cudf/"
 bug-reports: "https://gforge.inria.fr/tracker/?atid=13811&group_id=4385&func=browse"
-dev-repo: "git+https://github.com/dune-universe/cudf.git"
+dev-repo: "git+https://github.com/dune-universe/cudf.git#duniverse-0.9"
 depends: [
   "dune"
   "ocaml"

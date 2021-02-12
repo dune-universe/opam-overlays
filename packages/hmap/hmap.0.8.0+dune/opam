@@ -4,7 +4,7 @@ authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/hmap"
 doc: "http://erratique.ch/software/hmap/doc"
 license: "ISC"
-dev-repo: "git+http://github.com/dune-universe/hmap.git"
+dev-repo: "git+http://github.com/dune-universe/hmap.git#duniverse-v0.8.0"
 bug-reports: "http://github.com/dbuenzli/hmap/issues"
 tags: ["data-structure" "org:erratique"]
 depends: [

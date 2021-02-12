@@ -8,7 +8,7 @@ authors: [
 license: "LGPL 2.1 with OCaml linking exception"
 homepage: "https://github.com/ocaml/num/"
 bug-reports: "https://github.com/ocaml/num/issues"
-dev-repo: "git+https://github.com/dune-universe/num.git"
+dev-repo: "git+https://github.com/dune-universe/num.git#duniverse-v1.3"
 build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]

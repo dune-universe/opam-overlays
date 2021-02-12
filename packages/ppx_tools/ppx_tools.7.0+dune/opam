@@ -13,7 +13,7 @@ depends: [
 build: [
  [ "dune" "subst" ]
  [ "dune" "build" "-p" name "-j" jobs] ]
-dev-repo: "git://github.com/dune-universe/ppx_tools.git"
+dev-repo: "git://github.com/dune-universe/ppx_tools.git#duniverse-master"
 synopsis: "Tools for authors of syntactic tools (such as ppx rewriters)"
 description: """
 The tools are installed as a findlib package called 'ppx_tools'.

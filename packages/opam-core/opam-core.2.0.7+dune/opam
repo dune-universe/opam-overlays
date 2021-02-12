@@ -28,7 +28,7 @@ build: [
   ["./configure" "--disable-checks" "--prefix" prefix]
   [make "%{name}%.install"]
 ]
-dev-repo: "git+https://github.com/dune-universe/opam.git"
+dev-repo: "git+https://github.com/dune-universe/opam.git#duniverse-v2.0.7"
 url {
   src: "https://github.com/dune-universe/opam/archive/v2.0.7+dune.tar.gz"
   checksum: "sha256=80aaf6a16ebbab418e9e4016078fe9211870bd844fcbcfc3f7e05f5578de3c74"

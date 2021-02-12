@@ -2,7 +2,7 @@ opam-version: "2.0"
 maintainer:   "Anil Madhavapeddy <anil@recoil.org>"
 homepage:     "http://projects.camlcity.org/projects/findlib.html"
 bug-reports:  "https://gitlab.camlcity.org/gerd/lib-findlib/issues"
-dev-repo: "git+https://github.com/dune-universe/lib-findlib.git"
+dev-repo: "git+https://github.com/dune-universe/lib-findlib.git#duniverse-1.8.1"
 build: [
   [ "env" "FINDLIB_PREFIX=%{lib}%" "dune" "build" "-p" name "-j" jobs ]
 ]

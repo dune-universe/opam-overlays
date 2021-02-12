@@ -12,7 +12,7 @@ build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name]
 ]
-dev-repo: "git+https://github.com/dune-universe/bheap.git"
+dev-repo: "git+https://github.com/dune-universe/bheap.git#to-dune"
 url {
   src:
     "git://github.com/dune-universe/bheap.git#to-dune"

@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: [ "The fmt programmers" ]
 homepage: "https://erratique.ch/software/fmt"
 doc: "https://erratique.ch/software/fmt"
-dev-repo: "git+https://github.com/dune-universe/fmt.git"
+dev-repo: "git+https://github.com/dune-universe/fmt.git#duniverse-v0.8.9"
 bug-reports: "https://github.com/dbuenzli/fmt/issues"
 tags: [ "string" "format" "pretty-print" "org:erratique" ]
 license: "ISC"

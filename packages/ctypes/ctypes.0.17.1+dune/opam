@@ -38,7 +38,7 @@ build: [
   ["dune" "subst"]
   ["dune" "build" "-p" name "-j" jobs]
 ]
-dev-repo: "git+https://github.com/avsm/ocaml-ctypes.git"
+dev-repo: "git+https://github.com/avsm/ocaml-ctypes.git#dune-port"
 url {
   src: "git+https://github.com/avsm/ocaml-ctypes.git#dune-port"
 }
