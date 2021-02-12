@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/astring"
 doc: "http://erratique.ch/software/astring/doc"
-dev-repo: "git+https://github.com/dune-universe/astring.git"
+dev-repo: "git+https://github.com/dune-universe/astring.git#duniverse-v0.8.5"
 bug-reports: "https://github.com/dbuenzli/astring/issues"
 tags: [ "string" "org:erratique" ]
 license: "ISC"

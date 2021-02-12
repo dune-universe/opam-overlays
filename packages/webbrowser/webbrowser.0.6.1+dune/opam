@@ -4,7 +4,7 @@ authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/webbrowser"
 doc: "http://erratique.ch/software/webbrowser/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/dune-universe/webbrowser.git"
+dev-repo: "git+https://github.com/dune-universe/webbrowser.git#duniverse-v0.6.1"
 bug-reports: "https://github.com/dbuenzli/webbrowser/issues"
 tags: [ "web" "http" "uri" "browser" "cli" "org:erratique"]
 depends: [

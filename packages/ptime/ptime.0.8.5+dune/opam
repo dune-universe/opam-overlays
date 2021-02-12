@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["The ptime programmers"]
 homepage: "http://erratique.ch/software/ptime"
 doc: "http://erratique.ch/software/ptime/doc"
-dev-repo: "git+https://github.com/dune-universe/ptime.git"
+dev-repo: "git+https://github.com/dune-universe/ptime.git#duniverse-v0.8.5"
 bug-reports: "https://github.com/dbuenzli/ptime/issues"
 tags: [ "time" "posix" "system" "org:erratique" ]
 license: "ISC"

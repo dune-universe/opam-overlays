@@ -46,7 +46,7 @@ Logs and its reporters are distributed under the ISC license.
 """
 
 build: [[ "dune" "build" "-p" name ]]
-dev-repo: "git+https://github.com/dune-universe/logs.git"
+dev-repo: "git+https://github.com/dune-universe/logs.git#duniverse-v0.7.0"
 url {
   src: "https://github.com/dune-universe/logs/archive/v0.7.0+dune.tar.gz"
   checksum: "sha256=06ab994e5fc195f9b655544bffdc7d6aecec8f0f9b285e46f5668ec78030d13c"

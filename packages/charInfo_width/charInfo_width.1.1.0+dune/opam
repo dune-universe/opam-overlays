@@ -4,7 +4,7 @@ authors: [ "ZAN DoYe" ]
 homepage: "https://bitbucket.org/zandoye/charinfo_width/"
 bug-reports: "https://bitbucket.org/zandoye/charinfo_width/issues"
 license: "MIT"
-dev-repo: "https://github.com/dune-universe/charinfo_width"
+dev-repo: "git+https://github.com/dune-universe/charinfo_width.git#duniverse-1.1.0"
 build: [
   ["dune" "build" "-p" name "-j" jobs]
   ["dune" "runtest" "-p" name "-j" jobs] {with-test & (ocaml:version >= "4.04.0")}

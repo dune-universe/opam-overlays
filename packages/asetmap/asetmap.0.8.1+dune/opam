@@ -4,7 +4,7 @@ authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/asetmap"
 doc: "http://erratique.ch/software/asetmap/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/dune-universe/asetmap.git"
+dev-repo: "git+https://github.com/dune-universe/asetmap.git#duniverse-v0.8.1"
 bug-reports: "https://github.com/dbuenzli/asetmap/issues"
 tags: [ "org:erratique" "set" "map" "stdlib" ]
 depends: [

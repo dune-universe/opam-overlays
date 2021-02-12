@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "https://erratique.ch/software/uuseg"
 doc: "https://erratique.ch/software/uuseg"
-dev-repo: "git+https://github.com/dune-universe/uuseg.git"
+dev-repo: "git+https://github.com/dune-universe/uuseg.git#duniverse-v13.0.0"
 bug-reports: "https://github.com/dbuenzli/uuseg/issues"
 tags: [ "segmentation" "text" "unicode" "org:erratique" ]
 license: "ISC"

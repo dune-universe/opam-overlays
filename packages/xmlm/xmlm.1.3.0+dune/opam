@@ -2,7 +2,7 @@ opam-version: "2.0"
 maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/xmlm"
-dev-repo: "git+https://github.com/dune-universe/xmlm.git"
+dev-repo: "git+https://github.com/dune-universe/xmlm.git#duniverse-v1.3.0"
 bug-reports: "https://github.com/dbuenzli/xmlm/issues"
 doc: "http://erratique.ch/software/xmlm/doc/Xmlm"
 tags: [ "xml" "codec" "org:erratique" ]

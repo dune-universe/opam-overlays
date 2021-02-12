@@ -3,7 +3,7 @@ maintainer:   "defree@gmail.com"
 authors:      "The Merlin team"
 homepage:     "https://github.com/ocaml/merlin"
 bug-reports:  "https://github.com/ocaml/merlin/issues"
-dev-repo: "git+https://github.com/ocaml/merlin.git"
+dev-repo: "git+https://github.com/ocaml/merlin.git#duniverse-v3.3.4"
 build: [
   ["dune" "subst"] {pinned}
   ["dune" "build" "-p" name "-j" jobs]

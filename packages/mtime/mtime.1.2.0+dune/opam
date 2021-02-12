@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: [ "Daniel Bünzli <daniel.buenzl i@erratique.ch>" ]
 homepage: "http://erratique.ch/software/mtime"
 doc: "http://erratique.ch/software/mtime"
-dev-repo: "git+https://github.com/dune-universe/mtime.git"
+dev-repo: "git+https://github.com/dune-universe/mtime.git#duniverse-v1.2.0"
 bug-reports: "https://github.com/dbuenzli/mtime/issues"
 tags: [ "time" "monotonic" "system" "org:erratique" ]
 license: "ISC"

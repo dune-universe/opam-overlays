@@ -4,7 +4,7 @@ authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/topkg"
 doc: "http://erratique.ch/software/topkg/doc"
 license: "ISC"
-dev-repo: "git+https://github.com/dune-universe/topkg.git"
+dev-repo: "git+https://github.com/dune-universe/topkg.git#duniverse-v1.0.1"
 bug-reports: "https://github.com/dbuenzli/topkg/issues"
 depends: [
   "dune"

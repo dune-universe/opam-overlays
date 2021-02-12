@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/uutf"
 doc: "http://erratique.ch/software/uutf/doc/Uutf"
-dev-repo: "git+https://github.com/dune-universe/uutf.git"
+dev-repo: "git+https://github.com/dune-universe/uutf.git#duniverse-v1.0.2"
 bug-reports: "https://github.com/dbuenzli/uutf/issues"
 tags: [ "unicode" "text" "utf-8" "utf-16" "codec" "org:erratique" ]
 license: "ISC"

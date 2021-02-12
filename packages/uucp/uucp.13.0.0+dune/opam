@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: [ "The uucp programmers" ]
 homepage: "https://erratique.ch/software/uucp"
 doc: "https://erratique.ch/software/uucp/doc/Uucp"
-dev-repo: "git+https://github.com/dune-universe/uucp.git"
+dev-repo: "git+https://github.com/dune-universe/uucp.git#duniverse-v13.0.0"
 bug-reports: "https://github.com/dbuenzli/uucp/issues"
 tags: [ "unicode" "text" "character" "org:erratique" ]
 license: "ISC"

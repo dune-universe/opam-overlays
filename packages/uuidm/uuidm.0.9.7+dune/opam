@@ -3,7 +3,7 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/uuidm"
 doc: "http://erratique.ch/software/uuidm/doc/Uuidm"
-dev-repo: "git+https://github.com/dune-universe/uuidm.git"
+dev-repo: "git+https://github.com/dune-universe/uuidm.git#duniverse-v0.9.7"
 bug-reports: "https://github.com/dbuenzli/uuidm/issues"
 tags: [ "uuid" "codec" "org:erratique" ]
 license: "ISC"
