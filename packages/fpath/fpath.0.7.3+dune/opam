@@ -3,13 +3,13 @@ maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
 authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
 homepage: "http://erratique.ch/software/fpath"
 doc: "http://erratique.ch/software/fpath/doc"
-dev-repo: "git+https://github.com/dune-universe/fpath.git#duniverse-v0.7.3"
+dev-repo: "git+https://github.com/dune-universe/fpath.git"
 bug-reports: "https://github.com/dbuenzli/fpath/issues"
 tags: [ "file" "system" "path" "org:erratique" ]
 license: "ISC"
 depends: [
   "dune"
-  "ocaml" {>= "4.01.0" & < "4.12"}
+  "ocaml" {>= "4.03.0"}
   "result"
   "astring"
 ]
@@ -25,6 +25,6 @@ license.
 [astring]: http://erratique.ch/software/astring"""
 build: [[ "dune" "build" "-p" name ]]
 url {
-  src: "https://github.com/dune-universe/fpath/archive/v0.7.2+dune.tar.gz"
-  checksum: "sha256=3ff946188d3a21ba1f7cdd5e3809a2572ca24e5063334a7845ff6b36173ff8d6"
+  src: "https://github.com/dune-universe/fpath/archive/v0.7.3+dune.tar.gz"
+  checksum: "sha256=792ecf88d2a311596106e30775864629558ed0c2d0501590fda55f363dbb6ebc"
 }
