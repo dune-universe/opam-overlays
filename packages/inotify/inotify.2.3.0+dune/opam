@@ -1,0 +1,40 @@
+opam-version: "2.0"
+synopsis: "Inotify bindings for OCaml"
+description: "Inotify bindings for OCaml"
+maintainer: ["whitequark <whitequark@whitequark.org>"]
+authors: ["whitequark <whitequark@whitequark.org>"]
+license: "LGPL-2.1"
+homepage: "https://github.com/whitequark/ocaml-inotify"
+doc: "http://whitequark.github.io/ocaml-inotify"
+bug-reports: "https://github.com/whitequark/ocaml-inotify/issues"
+depends: [
+  "dune" {>= "2.9"}
+  "base-unix"
+  "base-bytes"
+  "fileutils" {with-test & >= "0.4.4"}
+  "ounit2" {with-test & >= "2.0"}
+  "odoc" {with-doc}
+]
+depopts: ["lwt"]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "--promote-install-files=false"
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+  ["dune" "install" "-p" name "--create-install-files" name]
+]
+dev-repo: "git+https://github.com/maiste/ocaml-inotify.git#dune-universe-v2.3.0
+"
+url: {
+  src: "https://github.com/maiste/ocaml-inotify/archive/refs/tags/v2.3.0+dune.tar.gz"
+  checksum: "sha256=d2ed536a635a4336005393084b69bf8132f1f0695b583c6dc8c50dd2aeb103ff"
+}
