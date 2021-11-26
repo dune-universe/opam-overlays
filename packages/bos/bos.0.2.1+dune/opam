@@ -1,0 +1,48 @@
+opam-version: "2.0"
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+dev-repo: "git+https://github.com/dune-universe/bos.git"
+tags: [ "os" "system" "cli" "command" "file" "path" "log" "unix" "org:erratique" ]
+license: "ISC"
+build: [[ "dune" "build" "-p" name ]]
+depends: [
+  "dune"
+  "ocaml" {>= "4.01.0"}
+  "base-unix"
+  "rresult" {>= "0.4.0"}
+  "astring"
+  "fpath"
+  "fmt" {>= "0.8.0"}
+  "logs"
+  "mtime" {with-test}
+]
+synopsis: "Basic OS interaction for OCaml"
+description: """
+Bos provides support for basic and robust interaction with the
+operating system in OCaml. It has functions to access the process
+environment, parse command line arguments, interact with the file
+system and run command line programs.
+
+Bos works equally well on POSIX and Windows operating systems.
+
+Bos depends on [Rresult][rresult], [Astring][astring], [Fmt][fmt],
+[Fpath][fpath] and [Logs][logs] and the OCaml Unix library. It is
+distributed under the ISC license.
+
+[rresult]: http://erratique.ch/software/rresult
+[astring]: http://erratique.ch/software/astring
+[fmt]: http://erratique.ch/software/fmt
+[fpath]: http://erratique.ch/software/fpath
+[logs]: http://erratique.ch/software/logs
+
+Home page: http://erratique.ch/software/bos  
+Contact: Daniel Bünzli `<daniel.buenzl i@erratique.ch>`"""
+url {
+  src:
+    "https://github.com/dune-universe/bos/releases/download/v0.2.1%2Bdune/bos-0.2.1.dune.tbz"
+  checksum: [
+    "sha256=c6a34311946ff906824cedc2d12825ee9ad73b73bfa1581fb8100d6fc3dd5c35"
+    "sha512=5a1422809050dfbebab9691f29109e8219e27ecc4bc50c2eb714dc59036811936e9c5860b13583ab0ba7c15a00ee5b515af25642cdc312a4814076d8e76e3fd7"
+  ]
+}
+x-commit-hash: "e8fa18765d4538bc5d6cc1501891d0cde3d1a797"
