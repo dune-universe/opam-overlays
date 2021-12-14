@@ -12,12 +12,11 @@ license: "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception"
 homepage: "https://github.com/dune-universe/dum"
 bug-reports: "https://github.com/dune-universe/dum/issues"
 depends: [
-  "dune" {>= "2.9"}
+  "dune" {>= "2.0"}
   "easy-format"
-  "odoc" {with-doc}
 ]
 build: [
-  ["dune" "subst"] {dev}
+  ["dune" "subst"] {pinned}
   [
     "dune"
     "build"
@@ -25,20 +24,18 @@ build: [
     name
     "-j"
     jobs
-    "--promote-install-files=false"
     "@install"
     "@runtest" {with-test}
     "@doc" {with-doc}
   ]
-  ["dune" "install" "-p" name "--create-install-files" name]
 ]
 dev-repo: "git+https://github.com/dune-universe/dum.git"
 url {
   src:
     "https://github.com/dune-universe/dum/releases/download/1.0.1%2Bdune/dum-1.0.1.dune.tbz"
   checksum: [
-    "sha256=93a079d43228d416e3d5c406f825105e287397d714db6d2ed7521063167e2481"
-    "sha512=f16565d58333dc600b4f67fa0b481c1bf2cb6b629932f88c2931404086b569958535408eea5d4e144d4eea9ed1369329967e6570333b8b06264ef9cbc7682bdb"
+    "sha256=c8ac6cc5246d4fbdd10038a1eb1b43ffb359bc6f2872d3c0f023e794e52379b4"
+    "sha512=7fe3d08b52bb1b017868f22535dc08c302571bd2f1ae453f9571cdae1be68a35e0ae85d2af707b889e8103e44aaa14f47f196fb03ed98edc051a730637597bd4"
   ]
 }
-x-commit-hash: "066c7815379076c41aea2f1743ee4305f18e54f2"
+x-commit-hash: "2dd12a23876cebf63ea5a93c279658203a84a539"
