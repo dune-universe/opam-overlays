@@ -32,8 +32,8 @@ build: [
   ]
   ["dune" "install" "-p" name "--create-install-files" name]
 ]
-dev-repo: "git+https://github.com/maiste/ocaml-inotify.git#dune-universe-v2.3.0"
+dev-repo: "git+https://github.com/maiste-forks/ocaml-inotify.git#dune-universe-v2.3.0"
 url {
-  src: "https://github.com/maiste/ocaml-inotify/archive/refs/tags/v2.3.0+dune.tar.gz"
+  src: "https://github.com/maiste-forks/ocaml-inotify/archive/refs/tags/v2.3.0+dune.tar.gz"
   checksum: "sha256=d2ed536a635a4336005393084b69bf8132f1f0695b583c6dc8c50dd2aeb103ff"
 }
