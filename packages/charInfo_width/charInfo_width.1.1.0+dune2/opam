@@ -1,0 +1,31 @@
+opam-version: "2.0"
+maintainer: "zandoye@gmail.com"
+authors: [ "ZAN DoYe" ]
+homepage: "https://github.com/dune-universe/charinfo_width/"
+bug-reports: "https://github.com/dune-universe/charinfo_width/issues"
+license: "MIT"
+dev-repo: "git+https://github.com/dune-universe/charinfo_width.git"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test & (ocaml:version >= "4.04.0")}
+]
+depends: [
+  "ocaml" {>= "4.02.3"}
+  "result"
+  "camomile" {>= "1.0.0" & < "2.0~"}
+  "dune"
+  "ppx_expect" {with-test}
+]
+
+synopsis: "Determine column width for a character"
+description: """
+This module is implemented purely in OCaml and the width function follows the prototype of POSIX's wcwidth."""
+url {
+  src:
+    "https://github.com/dune-universe/charinfo_width/releases/download/1.1.0%2Bdune2/charInfo_width-1.1.0.dune2.tbz"
+  checksum: [
+    "sha256=da0b0a1c8388708f739f2abade057f8a3937c712c596f3e0fc77fbca9513967b"
+    "sha512=bcb1227884a984ca635c4d3c51a16cbd82abf5bf5488bc6dd8f99f8655b27f2711dc608b382fb98b891f04b7a61411fb704158e64681cdebd6c719d2f688c2f7"
+  ]
+}
+x-commit-hash: "7ca71589d68314434966f96a57d55ac0c248d11e"
