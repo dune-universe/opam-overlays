@@ -10,6 +10,39 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
+
+      - name: Get changed OPAM packages
+        uses: tj-actions/changed-files@v13.1
+        id: packages-modified
+        with:
+          files: |
+            packages/*
+
       - uses: ocaml/setup-ocaml@v2
+        if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
+
       - run: opam pin add duniverse-lint --dev-repo git+https://github.com/dune-universe/duniverse-lint.git
-      - run: opam install duniverse-lint
+        name: Install duniverse-lint
+        if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
+
+      - name: Add overlay-repo locally
+        run: opam repo add opam-overlays .
+        if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
+
+      - run: |
+          for file in ${{ steps.packages-modified.outputs.all_changed_files }}; do
+            echo $file | grep -Po "packages/.*/\K.*(?=/)" >> changed
+          done
+          OPAM_PKGS=$(sort changed | uniq | tr '\n' ' ')
+          echo "OPAM_PKGS=$OPAM_PKGS" >> $GITHUB_ENV
+        name: Determine OPAM packages to lint
+        if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
+
+      - name: Lint packages
+        run: |
+          for pkg in ${{ env.OPAM_PKGS }}; do
+            echo "Linting $pkg"
+            opam source $pkg
+            (cd $pkg ; opam exec duniverse-lint)
+          done
+        if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
