@@ -43,6 +43,10 @@ jobs:
           for pkg in ${{ env.OPAM_PKGS }}; do
             echo "Linting $pkg"
             opam source $pkg > /dev/null
-            (cd $pkg ; opam exec duniverse-lint)
+            (cd $pkg ; opam exec duniverse-lint || touch ../lint-failed)
           done
+          if [ -f "lint-failed" ]; then
+            # at least one of the linter runs failed
+            exit 1
+          fi
         if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
