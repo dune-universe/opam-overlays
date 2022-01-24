@@ -42,7 +42,7 @@ jobs:
         run: |
           for pkg in ${{ env.OPAM_PKGS }}; do
             echo "Linting $pkg"
-            opam source $pkg
+            opam source $pkg > /dev/null
             (cd $pkg ; opam exec duniverse-lint)
           done
         if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
