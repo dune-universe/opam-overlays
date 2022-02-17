@@ -15,10 +15,10 @@ depends: [
 ]
 url {
   src:
-    "https://github.com/dune-universe/ppx_tools/releases/download/v6.1%2Bdune%2Bdev/ppx_tools-6.1.dune.dev.tbz"
+    "https://github.com/dune-universe/ppx_tools/releases/download/v6.1%2Bdev%2Bdune/ppx_tools-6.1.dev.dune.tbz"
   checksum: [
-    "sha256=a548ecf8167bf1a6cd2f640791255c25e884f05f1d6a213f1eb0ead0cc0e0dbb"
-    "sha512=fef8e1772a30e31213d3eb23f86dbaa31b23db797db11f226f93cfc8309d8dda794a92fa41f73eb8039143332233367c9daaffaba2e81aae8aa686832fc4d989"
+    "sha256=ddaea76b2daacb4a22ee0d814b4fdfa53bba22f915053b15e8f8023236a82b7a"
+    "sha512=c47dbba7a1eb27ccf35801f6edebd27d68745889861c14cf6b7f7d370bc119c1ce1ba801e6da6dff4e76da04b78c0d512fd3404eb2c046bc07a97376df5846a4"
   ]
 }
 x-commit-hash: "e1c98b1eeeb3a8bc7d7c5b1d74564c7d8c85ad46"
