@@ -1,15 +1,16 @@
 # Dune overlays
 
-`dune-universe/opam-overlays` is an opam repository containing all package
+`dune-universe/opam-overlays` is an opam repository containing package
 definitions of dune ports of existing packages from the main default repository
-that haven't been or won't be ported upstream in a near future.
+that haven't been ported yet or won't be ported upstream in the near future.
+
+It complements
+[`ocaml/opam-repository`](https://github.com/ocaml/opam-repository) and does
+not attempt to replace it.
 
 It's meant to be used by the [`opam-monorepo`](https://github.com/ocamllabs/dune-universe)
-tool to allow you to vendor your dependencies and build your entire project
-using `dune` only.
-
-There is a merged repository at
-<https://github.com/dune-universe/opam-repository> (in the `duniverse` branch).
+tool to allow you to vendor your dependencies and build your entire project using
+`dune` only.
 
 All packages' versions in this repository are suffixed with a `+dune` to
 distinguish them from the upstream variants. That means that the
