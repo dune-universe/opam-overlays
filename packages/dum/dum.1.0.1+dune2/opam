@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "Inspect the runtime representation of arbitrary OCaml values"
+description: """
+Dum is a library for inspecting the runtime representation of
+arbitrary OCaml values. Shared or cyclic data are detected
+and labelled. This guarantees that printing would always
+terminate. This makes it possible to print values such as closures,
+objects or exceptions in depth and without risk."""
+maintainer: ["martin@mjambon.com"]
+authors: ["Martin Jambon" "Jean-Christophe Filliatre" "Richard W.M. Jones"]
+license: "LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception"
+homepage: "https://github.com/dune-universe/dum"
+bug-reports: "https://github.com/dune-universe/dum/issues"
+depends: [
+  "dune" {>= "2.0"}
+  "easy-format"
+]
+build: [
+  ["dune" "subst"] {pinned}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/dune-universe/dum.git"
+url {
+  src:
+    "https://github.com/dune-universe/dum/releases/download/1.0.1%2Bdune2/dum-1.0.1.dune2.tbz"
+  checksum: [
+    "sha256=92108de38f274149b75ff394d043220f989ccc9c679427d9eebf275faeaf9d30"
+    "sha512=e4a58883fa2616e11831949c758b95d2e9933db972130959f9bd47158659efd63d20e3c790cd0ac112a2cd4c36e96a8c460c47e46ed3a2d7225f6a3129d04467"
+  ]
+}
+x-commit-hash: "8ab24de49e30b7106f9038751f1b3b83b1a94868"
