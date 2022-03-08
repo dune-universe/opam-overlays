@@ -1,0 +1,33 @@
+opam-version: "2.0"
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+homepage: "https://github.com/dune-universe/uchar"
+dev-repo: "git+https://github.com/dune-universe/uchar.git"
+bug-reports: "https://github.com/dune-universe/uchar/issues"
+tags: [ "text" "character" "unicode" "compatibility" "org:ocaml.org" ]
+license: "LGPL-2.1-only WITH OCaml-LGPL-linking-exception"
+depends: [ "dune" {>= "1.1"} "ocaml" {>= "4.03"} ]
+synopsis: "Dummy but non virtual package to satisfy both opam-monorepo and opam"
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+url {
+  src:
+    "https://github.com/dune-universe/uchar/releases/download/v0.0.2%2Bdune2/uchar-0.0.2.dune2.tbz"
+  checksum: [
+    "sha256=de4d427925ef25af0a605f3a91fee1c00b402bd2bea7849d05acbb225252983f"
+    "sha512=a568b7a040f3c7ebb5c15d0a9e5f84ce9c80307c132159e3f139f96db16e89e0cb4bbaadefea55557b6b9f26b79238e45223806570c6f2b95d5045ff71413d23"
+  ]
+}
+x-commit-hash: "e219d6d34485453ec0062418468cca641d78efea"
