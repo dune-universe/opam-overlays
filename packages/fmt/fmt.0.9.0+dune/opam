@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: """OCaml Format pretty-printer combinators"""
+maintainer: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+authors: ["The fmt programmers"]
+homepage: "https://github.com/dune-universe/fmt"
+dev-repo: "git+https://github.com/dune-universe/fmt.git"
+bug-reports: "https://github.com/dbuenzli/fmt/issues"
+license: ["ISC"]
+tags: ["string" "format" "pretty-print" "org:erratique"]
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "dune"
+]
+depopts: ["base-unix"
+          "cmdliner"]
+conflicts: ["cmdliner" {< "0.9.8"}]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+description: """
+Fmt exposes combinators to devise `Format` pretty-printing functions.
+
+Fmt depends only on the OCaml standard library. The optional `Fmt_tty`
+library that allows to setup formatters for terminal color output
+depends on the Unix library. The optional `Fmt_cli` library that
+provides command line support for Fmt depends on [`Cmdliner`][cmdliner].
+
+Fmt is distributed under the ISC license.
+
+[cmdliner]: http://erratique.ch/software/cmdliner
+
+Home page: http://erratique.ch/software/fmt"""
+url {
+  src:
+    "https://github.com/dune-universe/fmt/releases/download/v0.9.0%2Bdune/fmt-0.9.0.dune.tbz"
+  checksum: [
+    "sha256=844ce674b3146aaf9c14088a0b817cef10c7152054d3cc984543463da978ff81"
+    "sha512=27765423f43bdfbbdee50906faad14ecf653aaf2fdfc4db6b94791460aa32f3a3490b9d0c1a04aa3ecb0ac4333ea7ce5054251a67a0d67b64f3eb6d737afbf93"
+  ]
+}
+x-commit-hash: "4175d4cc6bb2a99b93e993cdb47e43fc8d27acfa"
