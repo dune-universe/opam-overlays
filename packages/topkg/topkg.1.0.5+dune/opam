@@ -1,0 +1,49 @@
+opam-version: "2.0"
+synopsis: """The transitory OCaml software packager"""
+maintainer: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+authors: ["The topkg programmers"]
+homepage: "https://github.com/dune-universe/topkg"
+dev-repo: "git+https://github.com/dune-universe/topkg.git"
+bug-reports: "https://github.com/dune-universe/topkg/issues"
+license: ["ISC"]
+tags: ["packaging" "ocamlbuild" "org:erratique"]
+depends: [
+  "dune"
+  "ocaml" {>= "4.01.0"}
+  "result" ]
+build: [[ "dune" "build" "-p" name "-j" jobs ]]
+description: """
+Topkg is a packager for distributing OCaml software. It provides an
+API to describe the files a package installs in a given build
+configuration and to specify information about the package's
+distribution, creation and publication procedures.
+
+The optional topkg-care package provides the `topkg` command line tool
+which helps with various aspects of a package's life cycle: creating
+and linting a distribution, releasing it on the WWW, publish its
+documentation, add it to the OCaml opam repository, etc.
+
+Topkg is distributed under the ISC license and has **no**
+dependencies. This is what your packages will need as a *build*
+dependency.
+
+Topkg-care is distributed under the ISC license it depends on
+[fmt][fmt], [logs][logs], [bos][bos], [cmdliner][cmdliner],
+[webbrowser][webbrowser] and `opam-format`.
+
+[fmt]: http://erratique.ch/software/fmt
+[logs]: http://erratique.ch/software/logs
+[bos]: http://erratique.ch/software/bos
+[cmdliner]: http://erratique.ch/software/cmdliner
+[webbrowser]: http://erratique.ch/software/webbrowser
+
+Home page: http://erratique.ch/software/topkg"""
+url {
+  src:
+    "https://github.com/dune-universe/topkg/releases/download/v1.0.5%2Bdune/topkg-1.0.5.dune.tbz"
+  checksum: [
+    "sha256=79057469e615da13c0f85c3fe325178e733036b7864bc20f3387ddaed22eb79a"
+    "sha512=e4184e8a4337e9fa891fc9a63c5d2b7c1bae88c7a851e46127991ad8686471e4a098c79bb4e94adb168aacd75f9c96b6523abd30f9600e68230b78b5f296dac9"
+  ]
+}
+x-commit-hash: "64521582e25702585f279d2ea9c4979ffce2ad73"
