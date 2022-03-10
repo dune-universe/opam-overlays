@@ -1,0 +1,36 @@
+opam-version: "2.0"
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+homepage: "https://github.com/dune-universe/uuidm"
+dev-repo: "git+https://github.com/dune-universe/uuidm.git"
+bug-reports: "https://github.com/dbuenzli/uuidm/issues"
+tags: [ "uuid" "codec" "org:erratique" ]
+license: "ISC"
+depends: [
+  "dune" {build}
+  "ocaml" {>= "4.08.0"}
+  "base-bytes"
+]
+depopts: ["cmdliner"]
+conflicts: [
+  "cmdliner" {< "1.1.0"}
+]
+synopsis: "Universally unique identifiers (UUIDs) for OCaml"
+description: """
+Uuidm is an OCaml module implementing 128 bits universally unique
+identifiers version 3, 5 (named based with MD5, SHA-1 hashing) and 4
+(random based) according to [RFC 4122][rfc4122].
+
+Uuidm has no dependency and is distributed under the ISC license.
+
+[rfc4122]: http://tools.ietf.org/html/rfc4122"""
+build: [[ "dune" "build" "-p" name ]]
+url {
+  src:
+    "https://github.com/dune-universe/uuidm/releases/download/v0.9.8%2Bdune/uuidm-0.9.8.dune.tbz"
+  checksum: [
+    "sha256=e949c5ae4e782f24447a590d23f89582d945011494c79266fc44a5357bd23add"
+    "sha512=83692fc8120194fbdd418ec2718fab50298db61b3c69af3ae6b2c9b3e9df44090889a203d2f996e534696ef368fd04d2154f2f542048cf74bb261172dafebf36"
+  ]
+}
+x-commit-hash: "6d080f2806fb65152d0b648c0822b7a90ae9900a"
