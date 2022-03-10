@@ -17,7 +17,7 @@ dev-repo: "git+https://github.com/dune-universe/dose3.git#duniverse-5.0.1"
 depends: [
   "dune"
   "ocaml"
-  "ocamlgraph" {>= "1.8.6"}
+  "ocamlgraph" {>= "1.8.6" & < "2.0.0"}
   "cudf" {>= "0.7"}
   "conf-perl" {build}
   ("extlib" {>= "1.7.0"} | "extlib-compat" {>= "1.7.0"})
