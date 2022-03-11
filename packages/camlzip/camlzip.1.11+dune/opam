@@ -1,0 +1,26 @@
+opam-version: "2.0"
+synopsis:
+  "Accessing compressed files in ZIP, GZIP and JAR format."
+description:
+  "The Camlzip library provides easy access to compressed files in ZIP and GZIP format, as well as to Java JAR files.  It provides functions for reading from and writing to compressed files in these formats."
+maintainer: ["Xavier Leroy <xavier.leroy@college-de-france.fr>"]
+authors: ["Xavier Leroy"]
+homepage: "https://github.com/dune-universe/camlzip"
+bug-reports: "https://github.com/xavierleroy/camlzip/issues"
+dev-repo: "git+https://github.com/dune-universe/camlzip.git"
+license: "LGPL-2.1-or-later with OCaml-LGPL-linking-exception"
+depends: [
+  "ocaml" {>= "4.07.0"}
+  "dune" {>= "2.0"}
+  "zip" {= version}
+]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+url {
+  src:
+    "https://github.com/dune-universe/camlzip/releases/download/v1.11%2Bdune/camlzip-1.11.dune.tbz"
+  checksum: [
+    "sha256=a50e9ed127da32942f4952521776333dea193f184d30d15cb1233de1abdf0b0c"
+    "sha512=93f834279bbe6245a4409293b4d11070010ffd3e40b17d2bf34f512e2934ef33262ae1a3aaa88a8dbeff29cea0465fec5becee7f1bc0ba3a2caa021db4d906c1"
+  ]
+}
+x-commit-hash: "72b289d3639f807d26f20063d05cd03ebb44de03"
