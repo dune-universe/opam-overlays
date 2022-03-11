@@ -1,0 +1,42 @@
+opam-version: "2.0"
+synopsis: "POSIX time for OCaml"
+description: """\
+Ptime has platform independent POSIX time support in pure OCaml. It
+provides a type to represent a well-defined range of POSIX timestamps
+with picosecond precision, conversion with date-time values,
+conversion with [RFC 3339 timestamps][rfc3339] and pretty printing to
+a human-readable, locale-independent representation.
+
+The additional Ptime_clock library provides access to a system POSIX
+clock and to the system's current time zone offset.
+
+Ptime is not a calendar library.
+
+Ptime has no dependency. Ptime_clock depends on your system library or
+JavaScript runtime system. Ptime and its libraries are distributed
+under the ISC license.
+
+[rfc3339]: http://tools.ietf.org/html/rfc3339
+
+Home page: http://erratique.ch/software/ptime"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: ["The ptime programmers"]
+license: "ISC"
+tags: [ "time" "posix" "system" "org:erratique" ]
+homepage: "https://github.com/dune-universe/ptime"
+bug-reports: "https://github.com/dbuenzli/ptime/issues"
+depends: [
+  "dune"
+  "ocaml" {>= "4.08.0"}
+]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+dev-repo: "git+https://github.com/dune-universe/ptime.git"
+url {
+  src:
+    "https://github.com/dune-universe/ptime/releases/download/v1.0.0%2Bdune2/ptime-1.0.0.dune2.tbz"
+  checksum: [
+    "sha256=10097ae4e8426f2e8cf64df150fb43179a7493a02e0ccef4f45124e3f08512a1"
+    "sha512=c49781faba1b9bf4cd01fe810e46354cdfa945f24642fb8aeabe2ab4a576717a18de7439b015f288ebaddcae9bde2fd01eff465c986a0e9ebcb2c82e8ce8d9b4"
+  ]
+}
+x-commit-hash: "d648c593809e2be9d6947e63484ed4a9c6b252fa"
