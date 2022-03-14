@@ -19,18 +19,49 @@ as `abc` version `X.Y.Z+dune`.
 
 ## Port a new package/version to dune on `opam-overlays`
 
-The typical workflow to port an existing package to dune and publish it on
-`opam-overlays` would be the following:
+The typical workflow to port an existing package `pkg`, version `X.Y.Z` to dune
+and publish it on `opam-overlays` would be the following:
 
-1. Create a fork of the upstream package `abc`
-2. Port it to dune on a specific branch `dune-universe-vX.Y.Z`, where `X.Y.Z`
-   corresponds to the upstream version you're dunifying. Make sure the opam file
-   has been properly updated and that dune is now part of the package `depends`
-   field and the `dev-repo` and `homepage` point to your fork. It is also
-   recommended to remove the `doc` field to ease the rest of the release
-   process.
-3. Tag it with `X.Y.Z+dune`.
-4. Use `dune-release` to release your port to this repo as described in the
+1. Create a fork of the upstream package `pkg` repo on dune-universe.
+2. Create a branch `dune-universe-vX.Y.Z` pointing to the upstream `X.Y.Z`
+   release tag.
+3. Work on the actual port. Make sure the opam file has been properly updated
+   and that dune is now part of the package `depends` field. The build
+   instructions should also be updated to use dune. To ease the release process,
+   the `dev-repo` and `homepage` should point to the dune-universe fork. It is
+   also recommended to remove the `doc` field for similar reasons.
+   Once it is ready, create a PR to merge your port into the
+   `dune-universe-vX.Y.Z` branch of the dune-universe fork.
+4. Once the PR is reviewed and merged, tag the head commit of the
+   `dune-universe-v.X.Y.Z` with `vX.Y.Z+dune`. You should use annotated tags as
+   this is what dune-release expect. You can do this by running
+   `dune-release tag vX.Y.Z+dune` or `git tag -a vX.Y.Z+dune`.
+5. Use `dune-release` to release the port to this repo as described in the
+   below section.
+
+Note that this requires you to be a member of the `dune-universe` organisation
+to follow all the steps described here. If you'd like to submit a new port as an
+external contributor, please open an issue on this repository with the name of
+the package and the version you wish to port. `dune-universe` maintainers will
+be happy to help you with the admin work so that you can submit the PR described
+in `3`. Once the PR is merged, `dune-universe` maintainers will take care of the
+release.
+
+## Fixing an existing port
+
+If there is an issue with an existing port that we need to fix, we do not remove
+the previous port. Doing so would invalidate previously created lockfiles or
+any reference to the original release tarball.
+We release the fix as a new, higher version of the port so that it is picked
+by the solver instead.
+
+Please follow the steps described below to create a new, fixed port of
+`pkg.X.Y.Z+dune`:
+1. Open a PR to merge the fix into the `dune-universe-vX.Y.Z` branch of the
+   dune-universe fork.
+2. Once the PR is reviewed and merged, tag the head commit of
+   `dune-universe-vX.Y.Z` with `vX.Y.Z+dune2` (or `+dune3`, `+dune4`, etc.).
+3. Use `dune-release` to release the port to this repo as described in the
    below section.
 
 ## Releasing to this repo using dune-release
@@ -40,11 +71,11 @@ The typical workflow to port an existing package to dune and publish it on
 If this is the first time you are releasing to `dune-universe/opam-overlays`
 you will need to do the following first:
 1. Clone this repository on your machine
-2. Fork of this repo on Github
+2. Fork this repo on Github
 
 ### Releasing
 
-Once your dune port is ready and you tagged it with `X.Y.Z+dune`, you can run
+Once your dune port is ready and you tagged it with `vX.Y.Z+dune`, you can run
 the following:
 ```
 dune-release --opam-repo dune-universe/opam-overlays --remote <url to your fork> --local <path-to-your-clone>
