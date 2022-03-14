@@ -37,7 +37,7 @@ and publish it on `opam-overlays` would be the following:
    this is what dune-release expect. You can do this by running
    `dune-release tag vX.Y.Z+dune` or `git tag -a vX.Y.Z+dune`.
 5. Use `dune-release` to release the port to this repo as described in the
-   below section.
+   section below.
 
 Note that this requires you to be a member of the `dune-universe` organisation
 to follow all the steps described here. If you'd like to submit a new port as an
