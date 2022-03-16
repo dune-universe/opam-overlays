@@ -1,0 +1,37 @@
+opam-version: "2.0"
+synopsis: """Result value combinators for OCaml"""
+maintainer: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+authors: ["The rresult programmers"]
+homepage: "https://github.com/dune-universe/rresult"
+dev-repo: "git+https://github.com/dune-universe/rresult.git"
+bug-reports: "https://github.com/dbuenzli/rresult/issues"
+license: ["ISC"]
+tags: ["result" "error" "org:erratique"]
+depends: [
+    "dune"
+    "ocaml" {>= "4.08.0"}
+]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+description: """
+Rresult is an OCaml module for handling computation results and errors
+in an explicit and declarative manner, without resorting to
+exceptions. It defines combinators to operate on the `result` type
+available from OCaml 4.03 in the standard library.
+
+OCaml 4.08 provides the `Stdlib.Result` module which you should prefer
+to Rresult.
+
+Rresult is distributed under the ISC license.
+
+Home page: http://erratique.ch/software/rresult  
+Contact: Daniel Bünzli `<daniel.buenzl i@erratique.ch>`"""
+url {
+  src:
+    "https://github.com/dune-universe/rresult/releases/download/v0.7.0%2Bdune/rresult-0.7.0.dune.tbz"
+  checksum: [
+    "sha256=3726c0ddf709e1886ef9adae83bf3696fa65466cc675d2494fa6ea9da9945a9f"
+    "sha512=e29d1a41fca85a301df370183740d89c6a23ceb7fa530e8ba3693917032d5784b7899b6f713fd5f66d49c3426811a65465f5709af23b3f9120017f94cd9a448e"
+  ]
+}
+x-commit-hash: "b81f103637dc52efe5edd924273864a2847a45ad"
+
