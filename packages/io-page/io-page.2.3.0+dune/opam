@@ -23,5 +23,5 @@ IO pages are page-aligned, and wrapped in the `Cstruct` library to avoid
 copying the data contained within the page.
 """
 url {
-  src: "git://github.com/mirage/io-page.git"
+  src: "git+https://github.com/mirage/io-page.git#v2.3.0"
 }
