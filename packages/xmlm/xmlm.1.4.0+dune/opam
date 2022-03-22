@@ -1,0 +1,32 @@
+opam-version: "2.0"
+synopsis: "Streaming XML codec for OCaml"
+description: """\
+Xmlm is a streaming codec to decode and encode the XML data format. It
+can process XML documents without a complete in-memory representation of the
+data.
+
+Xmlm is made of a single independent module and distributed
+under the ISC license.
+
+Home page: http://erratique.ch/software/xmlm"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The xmlm programmers"
+license: "ISC"
+tags: [ "xml" "codec" "org:erratique" ]
+homepage: "https://github.com/dune-universe/xmlm"
+bug-reports: "https://github.com/dbuenzli/xmlm/issues"
+depends: [
+  "dune"
+  "ocaml" {>= "4.05.0"}
+]
+build: [[ "dune" "build" "-p" name ]]
+dev-repo: "git+https://github.com/dune-universe/xmlm.git"
+url {
+  src:
+    "https://github.com/dune-universe/xmlm/releases/download/v1.4.0%2Bdune/xmlm-1.4.0.dune.tbz"
+  checksum: [
+    "sha256=415d3280cc201290cafe7fc80d391bb45723292740ac78a3773431048e9c443e"
+    "sha512=52611353dbb2ed347db69623c3cbbad544459c6e963a7c0ff1b3b86bfe4cdfc61ff5a22c8b5ac00c4a55bd63546598b65460a7f70145f68cb2d6a7c925ba6bdd"
+  ]
+}
+x-commit-hash: "5c72ac183a1ad0249c98845ec5d3bb36df2b167b"
