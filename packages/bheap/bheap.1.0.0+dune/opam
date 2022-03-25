@@ -15,6 +15,6 @@ build: [
 dev-repo: "git+https://github.com/dune-universe/bheap.git#to-dune"
 url {
   src:
-    "git://github.com/dune-universe/bheap.git#to-dune"
+    "git+https://github.com/dune-universe/bheap.git#to-dune"
 }
 
