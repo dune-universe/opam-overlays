@@ -1,0 +1,48 @@
+opam-version: "2.0"
+maintainer: "ygrek@autistici.org"
+homepage: "https://github.com/dune-universe/ocaml-extlib"
+dev-repo: "git+https://github.com/dune-universe/ocaml-extlib.git"
+bug-reports: "https://github.com/ygrek/ocaml-extlib/issues"
+license: "LGPL-2.1-only with OCaml-LGPL-linking-exception"
+authors: [
+  "Nicolas Cannasse"
+  "Brian Hurt"
+  "Yamagata Yoriyuki"
+  "Markus Mottl"
+  "Jesse Guardiani"
+  "John Skaller"
+  "Bardur Arantsson"
+  "Janne Hellsten"
+  "Richard W.M. Jones"
+  "ygrek"
+  "Gabriel Scherer"
+  "Pietro Abate"
+]
+depends: [
+  "dune"
+  "ocaml"
+  "cppo" {build}
+  "base-bytes"
+]
+synopsis:
+  "A complete yet small extension for OCaml standard library"
+description: """
+The purpose of this library is to add new functions to OCaml standard library
+modules, to modify some functions in order to get better performances or
+safety (tail-recursive) and also to provide new modules which should be useful
+for day to day programming.
+
+Current goal is to maintain compatibility, new software is encouraged to not use extlib since stdlib
+is now seeing many additions and improvements which make many parts of extlib obsolete.
+For tail-recursion safety consider using other libraries e.g. containers.
+"""
+build: [[ "dune" "build" "-p" name ]]
+url {
+  src:
+    "https://github.com/dune-universe/ocaml-extlib/releases/download/1.7.8%2Bdune/extlib-1.7.8.dune.tbz"
+  checksum: [
+    "sha256=b954420a35ed1ec301405f24fa065812b8d2e68068b54571c55848afea1372d7"
+    "sha512=a4388702260ad7af2c5f4eae4ec94bde73582b7b1a7289698f63ca7058cc6a5cf0a70b2ad3a06423df98025ce4f94c9c6fccb63f071751b9975a2fa62bfcad8c"
+  ]
+}
+x-commit-hash: "b5e656e5762d89edf3fde916715c6beea7b67865"
