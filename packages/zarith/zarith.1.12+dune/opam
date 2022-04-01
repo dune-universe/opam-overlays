@@ -15,7 +15,7 @@ build: [
 ]
 depends: [
   "ocaml" {>="4.05.0"}
-  "dune" {>="2.8"}
+  "dune" {>="2.0"}
   "conf-gmp"
 ]
 synopsis:
@@ -29,8 +29,8 @@ url {
   src:
     "https://github.com/dune-universe/Zarith/releases/download/1.12%2Bdune/zarith-1.12.dune.tbz"
   checksum: [
-    "sha256=88cc363e1a6603143c08f234949aa169462430c4779f566f92627f5d20086376"
-    "sha512=3dc58932cd39d0fbaec8d98f86db5b415b5b8363ec3f145b5094b30662c575d2e6a9d7fbe0a03cb4daab46694c5484504e6eb58d13f3bd32015419df20644700"
+    "sha256=af618fe6f029cd2cafe0e9807c3cb230ba8080dfd61e350fcdcfec63064ea904"
+    "sha512=84a3ed58773ddb143f2c309a17686a3c6c7ae930fbdfb2c736f80c61dbfe2c0972a9913d2b111e7b3a2cfd8e5b1999210ac88464833fe8dee798a4154a1aa966"
   ]
 }
-x-commit-hash: "29c21ae29c7dc8e1ee60935c6e38885ccf8e43d1"
+x-commit-hash: "512da67bd11f41f7c51c846e971de7bcac3ab9b7"
