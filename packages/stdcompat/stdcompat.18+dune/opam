@@ -8,7 +8,7 @@ license: "BSD-2-Clause"
 homepage: "https://github.com/dune-universe/stdcompat"
 bug-reports: "https://github.com/dune-universe/stdcompat/issues"
 depends: [
-  "ocaml" {>= "3.07" & < "4.14.0"}
+  "ocaml" {>= "3.08"}
   "dune" {>= "1.11"}
   "odoc" {with-doc}
 ]
