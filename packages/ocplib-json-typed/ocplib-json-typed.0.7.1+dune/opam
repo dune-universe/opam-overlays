@@ -1,0 +1,27 @@
+opam-version: "2.0"
+synopsis: "Libraries for reliable manipulation JSON objects"
+maintainer: "Benjamin Canou <benjamin@ocamlpro.com>"
+authors: "Benjamin Canou <benjamin@ocamlpro.com>"
+homepage: "https://github.com/dune-universe/ocplib-json-typed"
+bug-reports: "https://github.com/ocamlpro/ocplib-json-typed/issues"
+license: "LGPLv3 w/ linking exception"
+dev-repo: "git+https://github.com/dune-universe/ocplib-json-typed.git"
+
+build: [
+  ["dune" "build" "-j" jobs "-p" name "@install"]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+depends: [
+  "ocaml" {>= "4.03.0"}
+  "dune" {>= "1.7"}
+  "uri" {>= "1.9.0" }
+]
+url {
+  src:
+    "https://github.com/dune-universe/ocplib-json-typed/releases/download/v0.7.1%2Bdune/ocplib-json-typed-0.7.1.dune.tbz"
+  checksum: [
+    "sha256=0330dc6dd5663f65ed347f60752da156dd3f8cb12dc65e181344b5021b6e0641"
+    "sha512=99e8be9627ae417403c7ea6b6b5b843353acda2027857a9473b75c7173929046654a0a0bc7e73ad1d8006cbe1bf9fd8f3492e9b41301a352552d73b4173077b3"
+  ]
+}
+x-commit-hash: "a16bffb78e5c184126e2b58df3310717dcd9f5dd"
