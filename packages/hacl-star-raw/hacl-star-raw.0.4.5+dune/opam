@@ -29,11 +29,10 @@ x-ci-accept-failures: [
   "oraclelinux-7" # Default C compiler is too old
 ]
 build: [
-  ["sh" "-exc" "cd raw && ./configure"]
-  [make "-C" "raw"]
-]
-install: [
-  make "-C" "raw" "install-hacl-star-raw"
+  [
+    "dune" "build" "-p" name "-j" jobs
+    "@doc" {with-doc}
+  ]
 ]
 dev-repo: "git+https://github.com/dune-universe/hacl-star-dune.git"
 url {
