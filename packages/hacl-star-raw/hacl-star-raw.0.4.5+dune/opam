@@ -39,8 +39,8 @@ url {
   src:
     "https://github.com/dune-universe/hacl-star-dune/releases/download/v0.4.5%2Bdune/hacl-star-0.4.5.dune.tbz"
   checksum: [
-    "sha256=3fb07b04291f5884dfdb29f19613d365e323a7c24176651d4d57025bfae489a1"
-    "sha512=b123e066234fe1dfb7678715c94e8f251ec48354bef184d69f7aced85ded2ce5c2351664af924212091e715c9563ca7bc774b3cef80f1b5dbf8a8ca96efeaf0d"
+    "sha256=483c16a40eae67edd2452ece9e40f3707492d1009778cad3e779b7aae75d59db"
+    "sha512=317eab99444075091952788b3ab9c5afe2124fb2ee495a601a38dd2ff1a91cb65840ebfa7192dea962bd9c747eb053411a4c3ce5c4e9de30eb103e847f151121"
   ]
 }
-x-commit-hash: "e1f757bd19c097282a8476bf9fe9f7ad339b5f33"
+x-commit-hash: "ddd4d29c92225887ee3946d4afec8616c1f49a89"
