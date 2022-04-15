@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis:
+  "A simple tool and library to embed files and directories inside an OCaml executables"
+description:
+  "A tool ocp-ocamlres to embed files and directories inside OCaml executables, with a companion library ocplib-ocamlres to manipulate them at run-time."
+maintainer: ["Benjamin Canou <benjamin@ocamlpro.com>"]
+authors: ["Benjamin Canou <benjamin@ocamlpro.com>"]
+license: "BSD-2-Clause"
+homepage: "http://github.com/dune-universe/ocp-ocamlres"
+bug-reports: "http://github.com/OCamlPro/ocp-ocamlres/issues"
+depends: [
+  "dune" {>= "2.8"}
+  "ocaml" {>= "4.01.0"}
+  "pprint"
+  "astring"
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/dune-universe/ocp-ocamlres.git"
+url {
+  src:
+    "https://github.com/dune-universe/ocp-ocamlres/releases/download/v0.4%2Bdune2/ocp-ocamlres-0.4.dune2.tbz"
+  checksum: [
+    "sha256=bd81b801f5c7a57f5ba5b3e952a9d265981e1362f6294550e4f72f615b3d4048"
+    "sha512=796aef73536ae27c5ad822d081adaa6b02b9006cc2c17106c0a830701b43e66836715563dfd2f32b1ba1f451069f4ec202ada8318339b06f9b213fcc98eb028c"
+  ]
+}
+x-commit-hash: "075f622df65961fe712ff9b460c01f2cfa23deb7"
