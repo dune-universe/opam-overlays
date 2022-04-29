@@ -1,0 +1,38 @@
+opam-version: "2.0"
+synopsis: "Pseudo-random, splittable number generators"
+description:
+  "Pseudo-random number generators that support splitting and two interfaces: one stateful, one purely functional"
+maintainer: "Xavier Leroy <xavier.leroy@college-de-france.fr>"
+authors: "Xavier Leroy <xavier.leroy@college-de-france.fr>"
+license: "LGPL-2.1-only WITH OCaml-LGPL-linking-exception"
+homepage: "https://github.com/dune-universe/pringo"
+bug-reports: "https://github.com/xavierleroy/pringo/issues"
+depends: [
+  "dune" {>= "2.7"}
+  "ocaml" {>= "4.05.0"}
+  "testu01" {with-test}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://github.com/dune-universe/pringo.git"
+url {
+  src:
+    "https://github.com/dune-universe/pringo/releases/download/1.3%2Bdune2/pringo-1.3.dune2.tbz"
+  checksum: [
+    "sha256=c57cf51846b618f7014d23adeb7b85a9fb06198325002ad592127383c5042600"
+    "sha512=4f851ddc7bb330edb0fb82468910e6b0cf199f71119bed319ce7223f06410223a0abf0206e3969b9a6ac37fa0a0433c8ee12bf0dfe407eace7ad923bd1d09a04"
+  ]
+}
+x-commit-hash: "2bee98a6b39f04a2f2c9392fcc49da5736841137"
