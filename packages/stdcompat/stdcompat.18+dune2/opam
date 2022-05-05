@@ -1,0 +1,30 @@
+opam-version: "2.0"
+synopsis: "Compatibility module for OCaml standard library"
+description:
+  "Compatibility module for OCaml standard library allowing programs to use some recent additions to the OCaml standard library while preserving the ability to be compiled on former versions of OCaml."
+maintainer: "Thierry Martinez <martinez@nsup.org>"
+authors: "Thierry Martinez <martinez@nsup.org>"
+license: "BSD-2-Clause"
+homepage: "https://github.com/dune-universe/stdcompat"
+bug-reports: "https://github.com/dune-universe/stdcompat/issues"
+depends: [
+  "ocaml" {>= "3.07" & < "4.14.0"}
+  "dune" {>= "2.0"}
+  "odoc" {with-doc}
+]
+depopts: [ "result" "seq" "uchar" ]
+build: [
+  ["dune" "subst"] {pinned}
+  ["dune" "build" "-p" name "-j" jobs]
+  ["dune" "runtest" "-p" name "-j" jobs] {with-test}
+]
+dev-repo: "git+https://github.com/dune-universe/stdcompat.git"
+url {
+  src:
+    "https://github.com/dune-universe/stdcompat/releases/download/v18%2Bdune2/stdcompat-18.dune2.tbz"
+  checksum: [
+    "sha256=f86e1454d79c80aaf0a866eb5ae48e3cb573f52d30172af6fe94c0cfda786431"
+    "sha512=c11bdecfd8c853af8bb1ceb53733091864d26ee789358db615a07571261bdd55da01d0782459985d4381f8df5c2e7e2bd6229ff0b4bc8fcee94464da66832cc9"
+  ]
+}
+x-commit-hash: "ec1c4806748db03177499cd8ea033413ee551462"
