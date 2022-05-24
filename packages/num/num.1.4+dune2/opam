@@ -1,0 +1,28 @@
+opam-version: "2.0"
+maintainer: "Xavier Leroy <xavier.leroy@inria.fr>"
+authors: [
+  "Valérie Ménissier-Morain"
+  "Pierre Weis"
+  "Xavier Leroy"
+]
+license: "LGPL-2.1-only with OCaml-LGPL-linking-exception"
+homepage: "https://github.com/ocaml/num/"
+bug-reports: "https://github.com/ocaml/num/issues"
+dev-repo: "git+https://github.com/dune-universe/num.git"
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+depends: [
+  "ocaml" {>= "4.06.0"}
+  "dune" {>= "2.0"}
+]
+conflicts: [ "base-num" ]
+synopsis:
+  "The legacy Num library for arbitrary-precision integer and rational arithmetic"
+url {
+  src:
+    "https://github.com/dune-universe/num/releases/download/v1.4%2Bdune2/num-v1.4.dune2.tbz"
+  checksum: [
+    "sha256=ec52dcab09b6b638d1a2048e733ec402ee687e89383c3a62d7c0e12f8ed661ad"
+    "sha512=7d6035bd96a71d248c31662b877330656cd29040f45a143695bfa96765b91cea2f4c04b6ff78fdfa5876c1032c3baf4fd22c679b0ae09858d93cf46c1474b5cb"
+  ]
+}
+x-commit-hash: "4fa28637fe02cc5e66db7346a95507a91c6dad89"
