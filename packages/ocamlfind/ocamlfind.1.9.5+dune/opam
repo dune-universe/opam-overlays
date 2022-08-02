@@ -1,0 +1,39 @@
+opam-version: "2.0"
+maintainer:   "Thomas Gazagnaire <thomas@gazagnaire.org>"
+homepage:     "https://github.com/dune-universe/lib-findlib"
+bug-reports:  "https://github.com/dune-universe/lib-findlib/issues"
+dev-repo: "git+https://github.com/dune-universe/lib-findlib.git"
+build: [
+  [ "env" "FINDLIB_PREFIX=%{lib}%" "dune" "build" "-p" name "-j" jobs ]
+]
+install: [
+  ["install" "-m" "0755" "ocaml-stub" "%{bin}%/ocaml"] {ocaml:preinstalled}
+  ["cp" "%{lib}%/toplevel/topfind" "%{lib}%/ocaml/topfind"] {!ocaml:preinstalled}
+]
+remove: [
+  ["rm" "-f" "%{bin}%/ocaml"] {ocaml:preinstalled}
+  ["rm" "-f" "%{lib}%/ocaml/topfind"] {!ocaml:preinstalled}
+]
+depends: [
+  "ocaml" {>= "4.06.0"}
+  "dune"
+  "findlib"
+]
+setenv: OCAMLPATH = "%{lib}%"
+synopsis: "A library manager for OCaml"
+description: """
+Findlib is a library manager for OCaml. It provides a convention how
+to store libraries, and a file format ("META") to describe the
+properties of libraries. There is also a tool (ocamlfind) for
+interpreting the META files, so that it is very easy to use libraries
+in programs and scripts."""
+authors: "Gerd Stolpmann <gerd@gerd-stolpmann.de>"
+url {
+  src:
+    "https://github.com/dune-universe/lib-findlib/releases/download/1.9.5%2Bdune/findlib-1.9.5.dune.tbz"
+  checksum: [
+    "sha256=5242e5a0cfb2af52d6b596767513d80d2a3588608b366c759f9df0841736a228"
+    "sha512=1b39aedd0cbf623acb9abca88e65e5114f44524f3443f45def184663da76db515e791bee625282a69d20d88e7bc7d4522dbd142e551e09bd7a4cf99d1eabfe95"
+  ]
+}
+x-commit-hash: "b2a3fd546d19791c86fad2f27b407f9372ad50db"
