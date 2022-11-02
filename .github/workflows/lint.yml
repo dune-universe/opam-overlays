@@ -7,6 +7,10 @@ on:
 jobs:
   Duniverse-Linter-Check:
     name: Duniverse-lint run
+    strategy:
+      matrix:
+        ocaml-compiler:
+          - 4.14.x
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +23,8 @@ jobs:
             packages/*
 
       - uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
         if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
 
       - run: opam pin add duniverse-lint --dev-repo git+https://github.com/dune-universe/duniverse-lint.git
