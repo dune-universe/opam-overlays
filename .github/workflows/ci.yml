@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    name: Test
+
+    strategy:
+      matrix:
+        ocaml-compiler:
+          - 4.12.x
+          - 4.13.x
+          - 4.14.x
+          - 5.0.x
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use OCaml ${{ matrix.ocaml-compiler }}
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml-compiler }}
+
+      - name: Clone opam-repository
+        run: git clone https://github.com/ocaml/opam-repository.git
+        working-directory: ./test
+
+      - name: Install opam dependencies
+        run: opam install --deps-only --with-test .
+        working-directory: ./test
+
+      - name: Run tests
+        run: opam exec -- dune test
+        working-directory: ./test

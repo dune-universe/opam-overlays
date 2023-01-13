@@ -1,0 +1,8 @@
+# Local opam switch
+_opam
+
+# Dune build directory
+_build
+
+# Local copy of opam-repository
+opam-repository
