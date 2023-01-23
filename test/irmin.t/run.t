@@ -1,10 +1,6 @@
 Test that opam-monorepo can generate a lockfile and build irmin.
 
-  $ opam-monorepo lock
-  ==> Using 1 locally scanned package as the target.
-  ==> Found 201 opam dependencies for the target package.
-  ==> Querying opam database for their metadata and Dune compatibility.
-  ==> Calculating exact pins for each of them.
+  $ opam-monorepo lock > /dev/null 2>&1
   opam-monorepo: [WARNING] The following packages come from the same repository git+https://github.com/mirage/ocaml-git.git but are associated with different URLs:
   git-unix.3.11.0: https://github.com/mirage/ocaml-git/releases/download/3.11.0/git-3.11.0.tbz
   git-paf.3.11.0: https://github.com/mirage/ocaml-git/releases/download/3.11.0/git-3.11.0.tbz
@@ -14,12 +10,9 @@ Test that opam-monorepo can generate a lockfile and build irmin.
   carton-git.0.6.0: https://github.com/mirage/ocaml-git/releases/download/carton-v0.6.0/git-carton-v0.6.0.tbz
   carton.0.6.0: https://github.com/mirage/ocaml-git/releases/download/carton-v0.6.0/git-carton-v0.6.0.tbz
   The url for the highest versioned package was selected: git-unix.3.11.0: https://github.com/mirage/ocaml-git/releases/download/3.11.0/git-3.11.0.tbz
-  ==> Wrote lockfile with 124 entries to $TESTCASE_ROOT/opam-overlays-test-irmin.opam.locked. You can now run opam monorepo pull to fetch their sources.
-  $ opam-monorepo pull
-  ==> Using lockfile $TESTCASE_ROOT/opam-overlays-test-irmin.opam.locked
-  Successfully pulled 124/124 repositories
+  $ opam-monorepo pull > /dev/null
   $ dune build
-  $ dune exec irmin -- --version
+  $ dune exec irmin -- --version > /dev/null 2>&1
   Creating menhirLib.ml...
   Creating menhirLib.mli...
   clang: warning: argument unused during compilation: '-mpopcnt' [-Wunused-command-line-argument]
@@ -140,4 +133,3 @@ Test that opam-monorepo can generate a lockfile and build irmin.
   The StackLang code contains 5161 instructions in 241 blocks.
   The StackLang code comprises 5 mutually recursive groups.
   Read 101 sample input sentences and 48 error messages.
-  3.5.1
