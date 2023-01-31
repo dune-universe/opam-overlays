@@ -1,0 +1,14 @@
+(lang dune 3.0)
+
+(name opam-overlays-test)
+
+(generate_opam_files true)
+
+(cram enable)
+
+(package
+ (name opam-overlays-test)
+ (synopsis "CI tests for the opam-overlays repository")
+ (description "CI tests for the opam-overlays repository")
+ (allow_empty)
+ (depends opam-monorepo))
