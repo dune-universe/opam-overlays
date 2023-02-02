@@ -15,7 +15,6 @@ jobs:
     strategy:
       matrix:
         ocaml-compiler:
-          - 4.08.x
           - 4.14.x
           - 5.0.x
 
