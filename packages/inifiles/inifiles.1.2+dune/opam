@@ -1,0 +1,21 @@
+opam-version: "2.0"
+synopsis: "An ini file parser"
+maintainer: "https://github.com/ocaml/opam-repository/issues"
+dev-repo: "git+https://github.com/dune-universe/ocaml-inifiles"
+homepage: "https://github.com/dune-universe/ocaml-inifiles"
+depends: [
+    "ocaml"
+    "pcre"
+    "dune" {>= "1.1"}
+]
+conflicts: ["ocaml-option-bytecode-only"]
+build: [ "dune" "build" "-p" name "-j" jobs ]
+url {
+  src:
+    "https://github.com/dune-universe/ocaml-inifiles/releases/download/v1.2%2Bdune/inifiles-1.2.dune.tbz"
+  checksum: [
+    "sha256=c7d98938a9eb0c51d4e49758dbaa2bd3a351d63fc23234c9aa4d6cdbd397ed6b"
+    "sha512=b921e18c90b958b7a2e29b3b0f4c867b4f04e43d0382f36600a23dcf3c5b1b47541d6b4b651677d7d18f2bdaf33311b73a29fd702fd92ced233b30ea49d79d2e"
+  ]
+}
+x-commit-hash: "6f4d171ca18bc099f2c3ca75d36399edfc5d70d1"
