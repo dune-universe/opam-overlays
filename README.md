@@ -8,7 +8,7 @@ It complements
 [`ocaml/opam-repository`](https://github.com/ocaml/opam-repository) and does
 not attempt to replace it.
 
-It's meant to be used by the [`opam-monorepo`](https://github.com/ocamllabs/dune-universe)
+It's meant to be used by the [`opam-monorepo`](https://github.com/tarides/opam-monorepo)
 tool to allow you to vendor your dependencies and build your entire project using
 `dune` only.
 
