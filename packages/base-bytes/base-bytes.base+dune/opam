@@ -16,5 +16,5 @@ url {
   checksum: "sha256=795b9bf545841714aaf0e517b62834a589937f65ad815ed4589ea56fa614d238"
 }
 post-messages: [
-  "Do not install base-bytes.opam into an opam switch, it will not result in a working bytes library. This package is purely meant to be used with opam-monorepo."
+  "Do not install `base-bytes.opam` into an OPAM switch, it will not result in a working `bytes` library. This package is purely meant to be used with opam-monorepo. Use `opam install base-bytes.base` to install the right package in an OPAM switch."
 ]
