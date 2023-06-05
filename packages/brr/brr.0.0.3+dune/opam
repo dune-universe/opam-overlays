@@ -1,0 +1,43 @@
+opam-version: "2.0"
+synopsis: """Browser programming toolkit for OCaml"""
+maintainer: ["Daniel Bünzli <daniel.buenzl i@erratique.ch>"]
+authors: ["The brr programmers"]
+homepage: "https://github.com/dune-universe/brr.git"
+dev-repo: "git+https://github.com/dune-universe/brr"
+bug-reports: "https://github.com/dbuenzli/brr/issues"
+license: ["ISC" "BSD-3-Clause"]
+tags: ["reactive" "declarative" "frp" "front-end" "browser" "org:erratique"]
+depends: ["ocaml" {>= "4.08.0"}
+          "dune"
+	  "dune-site"
+          "js_of_ocaml-compiler" {>= "4.0.0"}
+          "js_of_ocaml-toplevel" {>= "4.0.0"}
+          "note"]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+description: """
+Brr is a toolkit for programming browsers in OCaml with the
+[`js_of_ocaml`][jsoo] compiler. It provides:
+
+* Interfaces to a selection of browser APIs.
+* Note based reactive support (optional and experimental).
+* An OCaml console developer tool for live interaction 
+  with programs running in web pages.
+* A JavaScript FFI for idiomatic OCaml programming.
+
+Brr is distributed under the ISC license. It depends on [Note][note]
+and on the `js_of_ocaml` compiler and runtime – but not on its
+libraries or syntax extension.
+
+[note]: https://erratique.ch/software/note
+[jsoo]: https://ocsigen.org/js_of_ocaml
+
+Homepage: https://erratique.ch/software/brr"""
+url {
+  src:
+    "https://github.com/dune-universe/brr/releases/download/v0.0.3%2Bdune/brr-v0.0.3.dune.tbz"
+  checksum: [
+    "sha256=68026d9c5536c624a76e1fdca709cde9025c8f89b9963c1c7506a7a092bc9f0e"
+    "sha512=f6ff60757696851e74008811a9aa241e278a54b5acf258f80f0183b7cf482d89962a1e6198deec7c4e6b5b51b9b9d6ea937a04ecee832fba858c0ad714e1e04c"
+  ]
+}
+x-commit-hash: "bbfd010797b69d47d88bcc22f5e73b1f97603026"
