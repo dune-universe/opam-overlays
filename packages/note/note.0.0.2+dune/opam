@@ -1,0 +1,31 @@
+opam-version: "2.0"
+synopsis: "Declarative events and signals for OCaml"
+description: """\
+Note is an OCaml library for functional reactive programming (FRP). It
+provides support to program with time varying values: declarative
+events and signals.
+
+Note is distributed under the ISC license.
+
+Homepage: http://erratique.ch/software/note"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The note programmers"
+license: "ISC"
+tags: ["reactive" "declarative" "signal" "event" "frp" "org:erratique"]
+homepage: "https://github.com/dune-universe/note.git"
+bug-reports: "https://github.com/dbuenzli/note/issues"
+depends: [
+  "ocaml" {>= "4.08.0"}
+  "dune"
+]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" "@runtest" {with-test} ]
+dev-repo: "git+https://github.com/dune-universe/note.git"
+url {
+  src:
+    "https://github.com/dune-universe/note/releases/download/v0.0.2%2Bdune/note-v0.0.2.dune.tbz"
+  checksum: [
+    "sha256=ac1ce8d90d52559692667d28af1d34ab079e3ae0a57f4bd5964409e068389d7f"
+    "sha512=903484f42f2b3880a4e1e0b3d3600cb2829295f32bda75bf3f71bab4ccca300b213ed78cdc8d8288154566ed3278b41ed6ee1855f14f5fb088b4b14f63e9b03d"
+  ]
+}
+x-commit-hash: "64c9821c98ddc3465d45fc9430e9540d59e20be0"
