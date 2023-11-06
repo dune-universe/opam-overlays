@@ -1,0 +1,39 @@
+opam-version: "2.0"
+synopsis: "Unicode text normalization for OCaml"
+description: """\
+Uunf is an OCaml library for normalizing Unicode text. It supports all
+Unicode [normalization forms]. The library is independent from any IO
+mechanism or Unicode text data structure and it can process text
+without a complete in-memory representation.
+
+Uunf is distributed under the ISC license. It has no dependency.
+
+[normalization forms]: http://www.unicode.org/reports/tr15/
+
+Homepage: <http://erratique.ch/software/uunf>"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The uunf programmers"
+license: "ISC"
+tags: ["unicode" "text" "normalization" "org:erratique"]
+homepage: "https://github.com/dune-universe/uunf"
+bug-reports: "https://github.com/dbuenzli/uunf/issues"
+depends: [
+  "dune"
+  "ocaml" {>= "4.14.0"}
+]
+depopts: ["uutf" "cmdliner"]
+conflicts: [
+  "uutf" {< "1.0.0"}
+  "cmdliner" {< "1.1.0"}
+]
+build: [ "dune" "build" "-p" name "-j" jobs ]
+dev-repo: "git+https://github.com/dune-universe/uunf.git"
+url {
+  src:
+    "https://github.com/dune-universe/uunf/releases/download/v15.1.0%2Bdune/uunf-15.1.0.dune.tbz"
+  checksum: [
+    "sha256=a6e2b323e87a0ea38250633d902e2838f33ccce35d69a33725a43d49f829a8a9"
+    "sha512=63b8bf991f36f68f5ac876a763a0de0dc16ea0e749359dfd9cd509638c80973cc55359e3ec879090f6c6de7e8bdd15ca1964c92b9ee9f220487fb6b237d94182"
+  ]
+}
+x-commit-hash: "e7796359e3cc1fac732ef41b4babf32085f6f15e"
