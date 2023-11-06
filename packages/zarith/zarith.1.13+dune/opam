@@ -28,7 +28,7 @@ arithmetic over big integers. Small integers are represented as Caml
 unboxed integers, for speed and space economy."""
 url {
   src:
-    "https://github.com/dune-universe/Zarith/releases/download/1.13+dune/zarith-1.13+dune.tbz"
+    "https://github.com/dune-universe/Zarith/releases/download/v1.13%2Bdune/zarith-1.13.dune.tbz"
   checksum: [
     "sha256=5cb16e3c89a75df86fd8c2646776197819af03d2b740f5e18e62ebfc843879f0"
     "sha512=bcdb890836bdb15c8eb478a6d6b6318b7bf5b3cf7e70c6b69bfad83946ff6125eae7498781f445df71729ece219bf25b41d5c224ed54f77f86238d4a4a819155"
