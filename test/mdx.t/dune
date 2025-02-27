@@ -1,0 +1,3 @@
+(rule
+  (alias execute)
+  (action (run ocaml-mdx --version)))
