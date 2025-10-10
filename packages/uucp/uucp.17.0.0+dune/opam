@@ -1,0 +1,37 @@
+opam-version: "2.0"
+synopsis: "Unicode character properties for OCaml"
+description: """\
+Uucp is an OCaml library providing efficient access to a selection of
+character properties of the [Unicode character database].
+
+Uucp is distributed under the ISC license. It has no dependency.
+
+Home page: <http://erratique.ch/software/uucp>
+
+[Unicode character database]: http://www.unicode.org/reports/tr44/"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The uucp programmers"
+license: "ISC"
+tags: ["unicode" "text" "character" "org:erratique"]
+homepage: "https://github.com/dune-universe/uucp"
+bug-reports: "https://github.com/dbuenzli/uucp/issues"
+depends: [
+  "ocaml" {>= "4.14.0"}
+  "dune" {>= "1.1"}
+]
+depopts: ["uunf" "cmdliner"]
+conflicts: [
+  "uunf" {< "17.0.0" | >= "18.0.0"}
+  "cmdliner" {< "1.1.0"}
+]
+build: [ "dune" "build" "-p" name "-j" jobs "@install" ]
+dev-repo: "git+https://github.com/dune-universe/uucp.git"
+url {
+  src:
+    "https://github.com/dune-universe/uucp/releases/download/v17.0.0%2Bdune/uucp-17.0.0.dune.tbz"
+  checksum: [
+    "sha256=7e67f7167b73beb48f2e78c4544b07ed50f0b1cf5697d581f2bbdfe00762ab2a"
+    "sha512=4e9eabf92bec65b9e04d74f224953086a935bf25be7f94848dcdd5d1c08c4abdd7f68ff7f141ef8c97b291762ad405194d7c6505e6852a84aa069afc502334f9"
+  ]
+}
+x-commit-hash: "59bc49f627783de382df5f8098e176db6cad460c"
