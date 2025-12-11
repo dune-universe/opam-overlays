@@ -5,6 +5,7 @@ description: "CI tests for the opam-overlays repository"
 depends: [
   "dune" {>= "3.0"}
   "opam-monorepo"
+  "mirage"
   "odoc" {with-doc}
 ]
 build: [
