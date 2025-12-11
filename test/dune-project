@@ -11,4 +11,4 @@
  (synopsis "CI tests for the opam-overlays repository")
  (description "CI tests for the opam-overlays repository")
  (allow_empty)
- (depends opam-monorepo))
+ (depends opam-monorepo mirage))
