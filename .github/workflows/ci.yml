@@ -36,5 +36,5 @@ jobs:
         working-directory: ./test
 
       - name: Run tests
-        run: opam exec -- dune test
+        run: opam exec -- dune test -j1
         working-directory: ./test

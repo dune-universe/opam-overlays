@@ -1,0 +1,6 @@
+(rule
+  (deps (source_tree ../../packages))
+  (target packages)
+  (action (bash "cp -r ../../packages packages")))
+
+(data_only_dirs packages)

@@ -2,8 +2,9 @@
  (applies_to :whole_subtree)
  (deps
   %{bin:opam-monorepo}
+  opam-overlays/packages
   (source_tree opam-repository)
   (source_tree opam-overlays)
   (sandbox preserve_file_kind)))
 
-(data_only_dirs opam-repository opam-overlays)
+(data_only_dirs opam-repository)
