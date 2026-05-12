@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "Declarative definition of command line interfaces for OCaml"
+description: """\
+Cmdliner allows the declarative definition of command line interfaces
+for OCaml.
+
+It provides a simple and compositional mechanism to convert command
+line arguments to OCaml values and pass them to your functions. The
+module automatically handles command line completion, syntax errors,
+help messages and UNIX man page generation. It supports programs with
+single or multiple commands and respects most of the [POSIX] and [GNU]
+conventions.
+
+Cmdliner has no dependencies and is distributed under the ISC license.
+
+Homepage: <http://erratique.ch/software/cmdliner>
+
+[POSIX]: http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap12.html
+[GNU]: http://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The cmdliner programmers"
+license: "ISC"
+tags: ["cli" "system" "declarative" "org:erratique"]
+homepage: "https://github.com/dune-universe/cmdliner"
+bug-reports: "https://github.com/dbuenzli/cmdliner/issues"
+depends: [
+  "dune"
+  "ocaml" {>= "4.08.0"}
+]
+build: [ "dune" "build" "-p" name "-j" jobs ]
+dev-repo: "git+https://github.com/dune-universe/cmdliner.git"
+x-maintenance-intent: ["(latest)"]
+url {
+  src:
+    "https://github.com/dune-universe/cmdliner/releases/download/v2.1.1%2Bdune/cmdliner-2.1.1.dune.tbz"
+  checksum: [
+    "sha256=ff11b7206e0a8469b73b9f419cf59bb386a3b2cd815366fcc5cbaf3283952fd6"
+    "sha512=4e9534d0d2896cc80ae0e3aaa9a64b09044be16f0c571118d8f4367009b912f6d3ebeeeddab2ac4567ec9339d365f9f97802858acf86753e90e500301d019f77"
+  ]
+}
+x-commit-hash: "7aadf7d569369f74cebf96e666bab4700d3be127"
