@@ -78,15 +78,8 @@ you will need to do the following first:
 Once your dune port is ready and you tagged it with `vX.Y.Z+dune`, you can run
 the following:
 ```
-dune-release --opam-repo dune-universe/opam-overlays --remote <url to your fork> --local <path-to-your-clone>
+dune-release --opam-repo dune-universe/opam-overlays --remote-repo <url to your fork> --local-repo <path-to-your-clone>
 ```
-
-We strongly recommend you delete the doc field from the opam file when doing
-the port as dune-release will otherwise try to publish the documentation.
-This is both not needed and can lead to errors.
-
-dune-release 2.0.0 will simplify this workflow greatly but in the meantime
-please bear with us!
 
 ## Support
 
