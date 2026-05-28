@@ -1,0 +1,37 @@
+opam-version: "2.0"
+maintainer: "Xavier Leroy <xavier.leroy@inria.fr>"
+authors: [
+  "Antoine Miné"
+  "Xavier Leroy"
+  "Pascal Cuoq"
+]
+homepage: "https://github.com/mirage/Zarith"
+bug-reports: "https://github.com/mirage/Zarith/issues"
+dev-repo: "git+https://github.com/mirage/Zarith.git"
+license: "LGPL-2.0-only WITH OCaml-LGPL-linking-exception"
+build: [
+  ["dune" "build" "-p" "zarith" ]
+]
+depends: [
+  "ocaml"     {>= "4.04.0"}
+  "dune" {>= "2.8"}
+  ("gmp" | "conf-gmp" )
+]
+conflicts: [ "gmp" {< "6.2.1-5"} ]
+synopsis:
+  "Implements arithmetic and logical operations over arbitrary-precision integers"
+description: """
+The Zarith library implements arithmetic and logical operations over
+arbitrary-precision integers. It uses GMP to efficiently implement
+arithmetic over big integers. Small integers are represented as Caml
+unboxed integers, for speed and space economy."""
+tags: ["cross-compile"]
+url {
+  src:
+    "https://github.com/mirage/Zarith/releases/download/1.13%2Bdune%2Bmirage/zarith-1.13.dune.mirage.tbz"
+  checksum: [
+    "sha256=ed1926f678d1bacf66270d7b3f76587b1dc3ef63f12012e221dea5377c32219c"
+    "sha512=948d6ee41dca29be7a9912d3732b2ff9a039e4fc1b8a5679cab53e6e93228f9016b1802ef7dd210e713f975616eff48a692c5a17f29840e7675c576dfb4d7514"
+  ]
+}
+x-commit-hash: "9de5ec36fc0851f19985b235aa07d56661688155"
