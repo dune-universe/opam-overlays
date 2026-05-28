@@ -10,12 +10,25 @@ not attempt to replace it.
 
 It's meant to be used by the [`opam-monorepo`](https://github.com/tarides/opam-monorepo)
 tool to allow you to vendor your dependencies and build your entire project using
-`dune` only.
+`dune` only, specifically in the context of building Mirage unikernels.
+
+For that reason, all ports in this repo are required to be cross-compilable
+(previously, a separate
+[mirage-opam-overlays](https://github.com/dune-universe/mirage-opam-overlays)
+existed for that purpose, which is now merged into this one.
 
 All packages' versions in this repository are suffixed with a `+dune` to
 distinguish them from the upstream variants. That means that the
 `opam-overlays` port of package `abc` version `X.Y.Z` is available on this repo
 as `abc` version `X.Y.Z+dune`.
+
+> [!NOTE]
+> For historical reasons, this package previously had `+dune` (buildable with
+> dune) and `+dune+mirage` (cross-compilable) variants, existing in different
+> repositories (this one and mirage-opam-overlays).
+>
+> Both repositories are now merged, and for all versions `> 1.14`, the port is
+> required to be cross-compilable, without a need for the `+mirage` prefix.
 
 ## Port a new package/version to dune on `opam-overlays`
 

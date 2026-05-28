@@ -1,2 +1,3 @@
 opam-version: "2.0"
 upstream: "https://github.com/mirage/mirage-dev/tree/master/"
+announce: [ "NOTE: mirage-opam-overlays has been merged to opam-overlays since July 2026. If you are using opam-monorepo in a context other than Mirage and your builds are now breaking because of 'zarith', please open an issue at https://github.com/dune-universe/opam-overlays. This warning message will be removed in October 2026." ]
