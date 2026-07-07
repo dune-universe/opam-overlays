@@ -2,8 +2,8 @@ Test that a few non-trivial unikernels in mirage-skeleton can resolve their depe
 
 Prepare tests
   $ git clone -q --depth=1 https://github.com/mirage/mirage-skeleton.git
-  $ overlays_path=$(realpath ../../../../../../)
-  $ export MIRAGE_EXTRA_REPOS=opam-overlays:file://$overlays_path,mirage-overlays:https://github.com/dune-universe/mirage-opam-overlays.git
+  $ overlays_path=$(realpath '../opam-overlays')
+  $ export MIRAGE_EXTRA_REPOS="opam-overlays:file://$overlays_path,mirage-overlays:https://github.com/dune-universe/mirage-opam-overlays.git"
 
 Try to resolve charrua dependencies
   $ cd mirage-skeleton/applications/dhcp
