@@ -9,5 +9,5 @@ Try to resolve charrua dependencies
   $ cd mirage-skeleton/applications/dhcp
   $ mirage configure -t hvt
   Successfully configured the unikernel. Now run 'make' (or more fine-grained steps: 'make all', 'make depends', or 'make lock').
-  $ make lock 2> /dev/null | grep "lock file has been generated"
+  $ (make lock 2> error.log | grep "lock file has been generated") || (cat error.log && false)
   The lock file has been generated. Run 'make pull' to retrieve the sources, or 'make install-switch' to install the host dependencies.
