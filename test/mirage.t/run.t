@@ -11,3 +11,13 @@ Try to resolve charrua dependencies
   Successfully configured the unikernel. Now run 'make' (or more fine-grained steps: 'make all', 'make depends', or 'make lock').
   $ (make lock 2> error.log | grep "lock file has been generated") || (cat error.log && false)
   The lock file has been generated. Run 'make pull' to retrieve the sources, or 'make install-switch' to install the host dependencies.
+
+Try to resolve crypto dependencies (which include zarith)
+  $ cd ../crypto
+  $ mirage configure -t hvt | grep "configured the unikernel"
+  Successfully configured the unikernel. Now run 'make' (or more fine-grained steps: 'make all', 'make depends', or 'make lock').
+  $ (make lock 2> error.log | grep "lock file has been generated") || (cat error.log && false)
+  The lock file has been generated. Run 'make pull' to retrieve the sources, or 'make install-switch' to install the host dependencies.
+  $ make pull > /dev/null
+  $ (make build 2> error.log | grep "Your unikernel binary is now ready") || (cat error.log && false)
+  Your unikernel binary is now ready in ./dist/crypto-test.hvt
