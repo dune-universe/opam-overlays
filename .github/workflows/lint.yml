@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         ocaml-compiler:
-          - 5.3.x
+          - 5.5.x
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
