@@ -3,4 +3,6 @@
   (target packages)
   (action (bash "cp -r ../../packages packages")))
 
+(rule (copy ../../repo repo))
+
 (data_only_dirs packages)
