@@ -6,6 +6,8 @@ depends: [
   "dune" {>= "3.0"}
   "opam-monorepo"
   "mirage"
+  "ocaml-solo5"
+  "solo5"
   "odoc" {with-doc}
 ]
 build: [
