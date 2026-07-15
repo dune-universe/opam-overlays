@@ -1,0 +1,58 @@
+opam-version: "2.0"
+synopsis: "Composable byte stream readers and writers for OCaml"
+description: """\
+Bytesrw extends the OCaml `Bytes` module with composable, memory
+efficient, byte stream readers and writers compatible with effect
+based concurrency.
+
+Except for byte slice life-times, these abstractions intentionally
+separate away ressource management and the specifics of reading and
+writing bytes.
+
+Bytesrw distributed under the ISC license. It has no dependencies.
+
+Homepage: <https://erratique.ch/software/bytesrw/>"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The bytesrw programmers"
+license: "ISC"
+tags: [
+  "bytes"
+  "entropy"
+  "streaming"
+  "zstd"
+  "zlib"
+  "gzip"
+  "deflate"
+  "random"
+  "csprng"
+  "sha1"
+  "sha2"
+  "compression"
+  "hashing"
+  "utf"
+  "xxhash"
+  "blake3"
+  "psa"
+  "tls"
+  "cryptography"
+  "sha3"
+  "org:erratique"
+]
+homepage: "https://github.com/dune-universe/bytesrw"
+bug-reports: "https://github.com/dune-universe/bytesrw/issues"
+depends: [
+  "ocaml" {>= "4.14.0"}
+  "dune" {>= "3.0"}
+]
+build: [ "dune" "build" "-p" name "-j" jobs ]
+dev-repo: "git+https://github.com/dune-universe/bytesrw.git"
+x-maintenance-intent: ["(latest)"]
+url {
+  src:
+    "https://github.com/dune-universe/bytesrw/releases/download/v0.3.0%2Bdune2/bytesrw-0.3.0.dune2.tbz"
+  checksum: [
+    "sha256=662bb54b623aaeeb2d5bfacd6dadcae6bf0d9e01c9b793b0dcadb159ba92d1c5"
+    "sha512=c38dd4aec2ab15bd2e54b3be37a0bdb794bcd3a83b18c0db39627132351d076868627f6b37edbdccf5c0178f80d73723159d88cc1eb60d36ecfae2f0aa8f6177"
+  ]
+}
+x-commit-hash: "c27ba63d4214f5328241fa732b2bd30da02093a8"
