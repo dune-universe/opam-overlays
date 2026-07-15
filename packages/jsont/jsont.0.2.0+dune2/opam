@@ -1,0 +1,45 @@
+opam-version: "2.0"
+synopsis: "Declarative JSON data manipulation for OCaml"
+description: """\
+Jsont is an OCaml library for declarative JSON data manipulation. It
+provides:
+
+- Combinators for describing JSON data using the OCaml values of your
+  choice. The descriptions can be used by generic functions to
+  decode, encode, query and update JSON data without having to
+  construct a generic JSON representation.
+- A JSON codec with optional text location tracking and layout
+  preservation. The codec is compatible with effect-based concurrency.
+
+The descriptions are independent from the codec and can be used by
+third-party processors or codecs.
+
+Jsont is distributed under the ISC license. It has no dependencies.
+The codec is optional and depends on the [`bytesrw`] library. 
+
+Homepage: <https://erratique.ch/software/jsont/>
+
+[`bytesrw`]: https://erratique.ch/software/bytesrw"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The jsont programmers"
+license: "ISC"
+tags: ["json" "codec" "org:erratique"]
+homepage: "https://github.com/dune-universe/jsont"
+bug-reports: "https://github.com/dune-universe/jsont/issues"
+depends: [
+  "ocaml" {>= "4.14.0"}
+  "dune" {>= "3.0"}
+]
+depopts: ["bytesrw"]
+build: [ "dune" "build" "-p" name "-j" jobs ]
+dev-repo: "git+https://github.com/dune-universe/jsont.git"
+x-maintenance-intent: ["(latest)"]
+url {
+  src:
+    "https://github.com/dune-universe/jsont/releases/download/v0.2.0%2Bdune2/jsont-0.2.0.dune2.tbz"
+  checksum: [
+    "sha256=b97373a327f5ee00f4f1bed720cfe5611ad3e704218792ff78d685988aad9e98"
+    "sha512=5dc1e71fb5b8249c825c414aa3e1dd22a5eae60b03662bfbf0144df1098e8c467cb613f5b7adb75cfac3f14084efddee67d672984e706704867c78f72ed2022a"
+  ]
+}
+x-commit-hash: "b32cb983b2cee03ed7149cd3358cdf425b0b57d4"
