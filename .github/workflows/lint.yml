@@ -44,6 +44,19 @@ jobs:
         name: Determine OPAM packages to lint
         if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
 
+      - name: Lint package sources
+        run: |
+          for pkg in ${{ env.OPAM_PKGS }}; do
+            echo "Linting src field for $pkg"
+            (opam show --raw -f "url.src" "$pkg" | grep '^"http' > /dev/null) || \
+            (echo "$pkg does not have an HTTP(S) source archive" && touch ../lint-failed)
+          done
+          if [ -f "lint-failed" ]; then
+            # at least one of the linter runs failed
+            exit 1
+          fi
+        if: ${{ steps.packages-modified.outputs.any_changed == 'true' }}
+
       - name: Lint packages
         run: |
           for pkg in ${{ env.OPAM_PKGS }}; do
