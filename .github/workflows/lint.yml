@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Get changed OPAM packages
-        uses: tj-actions/changed-files@v13.1
+        uses: tj-actions/changed-files@v45.0.8
         id: packages-modified
         with:
           files: |
