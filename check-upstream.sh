@@ -14,7 +14,11 @@ STATUS=0
 for pkg in $(opam show -f package "${PACKAGES[@]}"); do
     barepkg=$(echo "$pkg" | awk -F'+' '{print $1}')
     if [[ $pkg == "$barepkg" ]]; then
-        echo "New version upstream: $pkg"
+        dependencies=$(opam show --raw -f depends "$pkg" | sed 's/{[^}]*} *//g')
+        # skip if latest upstream uses dune already
+        if ! echo "$dependencies" | grep '"dune"' > /dev/null; then
+            echo "New version upstream: $pkg"
+        fi
     fi
 done
 
