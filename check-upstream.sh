@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# NOTE: run this in an empty switch to obtain the correct results
+
 OVERLAYS_REPO=${1:-overlays}
 
 mapfile -t PACKAGES < <(opam list --repo="$OVERLAYS_REPO" -A -s)
