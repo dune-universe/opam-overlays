@@ -1,0 +1,40 @@
+opam-version: "2.0"
+synopsis: "Non-blocking streaming JSON codec for OCaml"
+description: """\
+Jsonm is a non-blocking streaming codec to decode and encode the JSON
+data format. It can process JSON text without blocking on IO and
+without a complete in-memory representation of the data.
+
+The alternative "uncut" codec also processes whitespace and
+(non-standard) JSON with JavaScript comments.
+
+Jsonm is made of a single module and depends on [Uutf][uutf]. It is distributed
+under the ISC license.
+
+[uutf]: http://erratique.ch/software/uutf
+
+Home page: http://erratique.ch/software/jsonm  
+Contact: Daniel Bünzli `<daniel.buenzl i@erratique.ch>`"""
+maintainer: "Daniel Bünzli <daniel.buenzl i@erratique.ch>"
+authors: "The jsonm programmers"
+homepage: "http://erratique.ch/software/jsonm"
+doc: "http://erratique.ch/software/jsonm/doc/Jsonm"
+dev-repo: "git+https://github.com/dune-universe/jsonm.git"
+bug-reports: "https://github.com/dbuenzli/jsonm/issues"
+tags: [ "json" "codec" "org:erratique" ]
+license: "ISC"
+depends: [
+  "dune"
+  "ocaml" {>= "4.05.0"}
+  "uutf" {> "1.0.0"}
+]
+build: [[ "dune" "build" "-p" name ]]
+url {
+  src:
+    "https://github.com/dune-universe/jsonm/releases/download/v1.0.2%2Bdune/jsonm-1.0.2.dune.tbz"
+  checksum: [
+    "sha256=43e70a4b10a3de38512c7e350d7f6508c806f9937a44c67ad9cdb1c97b28f479"
+    "sha512=432f7ad66045f285f337c91660fc04bec1773243cd22e108aa682ad7c960b340c35f6685818d2c39f6213fa475b4805272cdef1b3e62e88b4c4b534077ddf3b3"
+  ]
+}
+x-commit-hash: "67d537fea607c18a2323b1942d7455c7029f2435"
